@@ -22,6 +22,8 @@ const Header = () => {
             <div className="ml-10 flex items-baseline space-x-8">
               <a href="#home" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Home</a>
               <a href="#features" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Features</a>
+              <a href="/products" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Products</a>
+              <a href="/design-development" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Design & Development</a>
               <a href="#work" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Our Work</a>
               <a href="#blog" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Blog</a>
               <a href="#contact" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Contact</a>
@@ -43,6 +45,8 @@ const Header = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
               <a href="#home" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Home</a>
               <a href="#features" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Features</a>
+              <a href="/products" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Products</a>
+              <a href="/design-development" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Design & Development</a>
               <a href="#work" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Our Work</a>
               <a href="#blog" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Blog</a>
               <a href="#contact" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Contact</a>
