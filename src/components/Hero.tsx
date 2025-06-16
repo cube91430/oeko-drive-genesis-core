@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 text-white">
+    <section id="home" className="relative bg-gradient-to-br from-moss-dark via-moss-medium to-slate-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -26,14 +26,14 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
+                className="bg-moss-light hover:bg-moss-medium text-moss-dark hover:text-white px-8 py-3 text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
                 Get Started
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-slate-300 text-slate-300 hover:bg-slate-700 hover:border-slate-200 px-8 py-3 text-lg font-semibold rounded-lg transition-all"
+                className="border-slate-300 text-slate-300 hover:bg-moss-light hover:text-moss-dark hover:border-moss-light px-8 py-3 text-lg font-semibold rounded-lg transition-all"
               >
                 Learn More
               </Button>
@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-slate-600 to-slate-800 rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div className="bg-gradient-to-br from-moss-medium to-moss-dark rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
               <div className="bg-slate-900 rounded-2xl p-6">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-2">
@@ -50,10 +50,10 @@ const Hero = () => {
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
                   <div className="space-y-2">
-                    <div className="h-2 bg-emerald-600 rounded w-3/4"></div>
-                    <div className="h-2 bg-blue-600 rounded w-1/2"></div>
-                    <div className="h-2 bg-purple-600 rounded w-5/6"></div>
-                    <div className="h-2 bg-yellow-600 rounded w-2/3"></div>
+                    <div className="h-2 bg-moss-light rounded w-3/4"></div>
+                    <div className="h-2 bg-moss-medium rounded w-1/2"></div>
+                    <div className="h-2 bg-moss-dark rounded w-5/6"></div>
+                    <div className="h-2 bg-moss-light rounded w-2/3"></div>
                   </div>
                 </div>
               </div>

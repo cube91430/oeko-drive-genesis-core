@@ -3,10 +3,10 @@ import React from 'react';
 
 const Stats = () => {
   const stats = [
-    { value: "500+", label: "Active Projects", color: "text-emerald-600" },
-    { value: "50K+", label: "Downloads", color: "text-blue-600" },
-    { value: "95%", label: "Uptime", color: "text-purple-600" },
-    { value: "24/7", label: "Support", color: "text-orange-600" }
+    { value: "500+", label: "Active Projects", color: "text-moss-medium" },
+    { value: "50K+", label: "Downloads", color: "text-moss-dark" },
+    { value: "95%", label: "Uptime", color: "text-moss-light" },
+    { value: "24/7", label: "Support", color: "text-moss-medium" }
   ];
 
   return (

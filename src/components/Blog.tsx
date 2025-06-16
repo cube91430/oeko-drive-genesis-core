@@ -50,7 +50,7 @@ const Blog = () => {
               key={index}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="h-48 bg-gradient-to-br from-slate-600 to-slate-800">
+              <div className="h-48 bg-gradient-to-br from-moss-dark to-moss-medium">
                 <img 
                   src={`https://images.unsplash.com/${post.image}?auto=format&fit=crop&w=600&h=300`}
                   alt={post.title}
@@ -59,12 +59,12 @@ const Blog = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-emerald-600 font-medium">{post.category}</span>
+                  <span className="text-sm text-moss-medium font-medium">{post.category}</span>
                   <span className="text-sm text-slate-500">{post.date}</span>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{post.title}</h3>
                 <p className="text-slate-600 mb-4">{post.excerpt}</p>
-                <Button variant="outline" size="sm" className="text-slate-600 hover:text-slate-800">
+                <Button variant="outline" size="sm" className="text-moss-dark border-moss-medium hover:bg-moss-medium hover:text-white">
                   Read More
                 </Button>
               </div>

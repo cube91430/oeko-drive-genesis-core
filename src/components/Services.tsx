@@ -22,20 +22,20 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-800 text-white">
+    <section className="py-24 bg-moss-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="text-center">
-              <div className="bg-slate-700 rounded-xl p-8 h-full flex flex-col">
+              <div className="bg-moss-medium rounded-xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-slate-300 mb-6 flex-grow">{service.description}</p>
+                <p className="text-moss-light mb-6 flex-grow">{service.description}</p>
                 <div className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
-                    <div key={idx} className="text-sm text-slate-400">• {feature}</div>
+                    <div key={idx} className="text-sm text-moss-light">• {feature}</div>
                   ))}
                 </div>
-                <Button variant="outline" className="border-slate-300 text-slate-300 hover:bg-slate-600">
+                <Button variant="outline" className="border-moss-light text-moss-light hover:bg-moss-light hover:text-moss-dark">
                   Read More
                 </Button>
               </div>

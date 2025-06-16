@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,20 +38,20 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Moss Color Palette Custom Variables */
+    --moss-dark: #006270;
+    --moss-medium: #009394;
+    --moss-light: #00e0c7;
+    --moss-white: #ffffff;
+    --moss-dark-bg: #2d3748;
   }
 
   .dark {
@@ -100,4 +101,15 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Moss color utility classes */
+@layer utilities {
+  .bg-moss-dark { background-color: var(--moss-dark); }
+  .bg-moss-medium { background-color: var(--moss-medium); }
+  .bg-moss-light { background-color: var(--moss-light); }
+  .text-moss-dark { color: var(--moss-dark); }
+  .text-moss-medium { color: var(--moss-medium); }
+  .text-moss-light { color: var(--moss-light); }
+  .border-moss-medium { border-color: var(--moss-medium); }
 }
