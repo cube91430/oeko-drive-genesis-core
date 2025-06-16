@@ -12,7 +12,7 @@ const Hero = () => {
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 Dream, Build, Deploy
               </h1>
-              <p className="text-xl md:text-2xl text-slate-100 leading-relaxed">
+              <p className="text-xl md:text-2xl text-black leading-relaxed">
                 Open Source Modules for System Control, Flexible Analysis, and High Performance Motor Control in Robotics and Physical AI Applications
               </p>
             </div>
