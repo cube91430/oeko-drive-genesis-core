@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import Header from '../components/Header';
@@ -82,7 +81,7 @@ const DesignDevelopment = () => {
       {/* Animated Banner */}
       <section className="bg-moss-medium py-4 overflow-hidden">
         <div className="flex animate-pulse">
-          <div className="flex items-center space-x-8 text-black font-bold text-lg whitespace-nowrap">
+          <div className="flex items-center space-x-8 text-black font-bold text-base whitespace-nowrap">
             <span>Design & Development</span>
             <span>⚡</span>
             <span>Embedded Development</span>
@@ -213,7 +212,7 @@ const DesignDevelopment = () => {
       {/* Bottom Banner */}
       <section className="bg-moss-medium py-4 overflow-hidden">
         <div className="flex animate-pulse">
-          <div className="flex items-center space-x-8 text-black font-bold text-lg whitespace-nowrap">
+          <div className="flex items-center space-x-8 text-black font-bold text-base whitespace-nowrap">
             <span>Design & Development</span>
             <span>⚡</span>
             <span>Embedded Development</span>
