@@ -81,7 +81,7 @@ const Products = () => {
 
       {/* Animated Banner */}
       <section className="bg-moss-medium py-4 overflow-hidden">
-        <div className="flex animate-pulse">
+        <div className="flex animate-pulse justify-center">
           <div className="flex items-center space-x-8 text-black font-bold text-lg whitespace-nowrap">
             <span>Prototyping</span>
             <span>⚡</span>
@@ -160,7 +160,7 @@ const Products = () => {
 
       {/* Bottom Banner */}
       <section className="bg-moss-medium py-4 overflow-hidden">
-        <div className="flex animate-pulse">
+        <div className="flex animate-pulse justify-center">
           <div className="flex items-center space-x-8 text-black font-bold text-lg whitespace-nowrap">
             <span>Prototyping</span>
             <span>⚡</span>
