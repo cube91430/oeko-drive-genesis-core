@@ -9,56 +9,56 @@ const Products = () => {
   const services = [
     {
       icon: Monitor,
-      title: "UI/UX Design",
-      description: "Creating intuitive and engaging user interfaces with modern design principles.",
+      title: "Development Boards",
+      description: "High-performance microcontroller and embedded development boards for robotics and automotive control systems.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Smartphone,
-      title: "Application Design",
-      description: "Comprehensive mobile and web application design solutions.",
+      title: "Edge CAN Networks",
+      description: "Advanced CAN bus communication solutions for distributed automotive and industrial control systems.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Globe,
-      title: "Website Design",
-      description: "Professional website design that converts visitors into customers.",
+      title: "Power",
+      description: "Efficient power management and distribution systems for robotics and automotive applications.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Layout,
-      title: "UI Design",
-      description: "Clean and functional user interface design for all platforms.",
+      title: "Actuators",
+      description: "Precision actuators and servo systems for robotic motion control and automotive mechanisms.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Lightbulb,
-      title: "Design System",
-      description: "Scalable design systems for consistent brand experience.",
+      title: "Components & Parts",
+      description: "High-quality electronic components and mechanical parts for building robust robotic systems.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Layers,
-      title: "Wireframing",
-      description: "Strategic wireframing to plan and optimize user journeys.",
+      title: "Communication Networks",
+      description: "Wireless and wired communication protocols for seamless robotics and vehicle connectivity.",
       accent: "border-l-moss-medium"
     },
     {
       icon: User,
-      title: "Brand Identity",
-      description: "Complete brand identity design including logos and guidelines.",
+      title: "Sensors",
+      description: "Advanced sensor arrays including LIDAR, cameras, IMU, and environmental sensors for autonomous systems.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Image,
-      title: "Illustration",
-      description: "Custom illustrations and graphics for your brand.",
+      title: "Tools & Software",
+      description: "Professional development tools and software platforms for robotics programming and simulation.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Palette,
-      title: "Web App Design",
-      description: "Modern web application design with focus on usability.",
+      title: "Updates",
+      description: "Over-the-air firmware updates and system maintenance solutions for deployed robotics platforms.",
       accent: "border-l-moss-medium"
     }
   ];
@@ -83,13 +83,13 @@ const Products = () => {
       <section className="bg-moss-medium py-4 overflow-hidden">
         <div className="flex animate-pulse">
           <div className="flex items-center space-x-8 text-black font-bold text-lg whitespace-nowrap">
-            <span>Web Design</span>
+            <span>Prototyping</span>
             <span>⚡</span>
-            <span>App Design</span>
+            <span>Edge CAN</span>
             <span>⚡</span>
-            <span>Dashboard</span>
+            <span>Sensors</span>
             <span>⚡</span>
-            <span>Wireframe</span>
+            <span>Motor Control</span>
             <span>⚡</span>
           </div>
         </div>
@@ -149,7 +149,7 @@ const Products = () => {
         {/* Floating Tags */}
         <div className="relative mt-16 overflow-hidden">
           <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
-            {['Prototype', 'Mobile App Design', 'Website Design', 'Branding', 'UI/UX Design', 'Brand Identity', 'Graphic Design', 'UI Design', 'Landing Page', 'Product Design'].map((tag, index) => (
+            {['Prototyping', 'Edge CAN Networks', 'Sensor Integration', 'Motor Control', 'Development Boards', 'Power Systems', 'Communication Networks', 'Actuators', 'Components & Parts', 'Robotics Software'].map((tag, index) => (
               <span key={index} className="bg-moss-medium text-black px-4 py-2 rounded-full text-sm font-medium">
                 {tag}
               </span>
@@ -162,13 +162,13 @@ const Products = () => {
       <section className="bg-moss-medium py-4 overflow-hidden">
         <div className="flex animate-pulse">
           <div className="flex items-center space-x-8 text-black font-bold text-lg whitespace-nowrap">
-            <span>Web Design</span>
+            <span>Prototyping</span>
             <span>⚡</span>
-            <span>App Design</span>
+            <span>Edge CAN</span>
             <span>⚡</span>
-            <span>Dashboard</span>
+            <span>Sensors</span>
             <span>⚡</span>
-            <span>Wireframe</span>
+            <span>Motor Control</span>
             <span>⚡</span>
           </div>
         </div>
