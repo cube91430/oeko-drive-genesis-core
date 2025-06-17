@@ -9,56 +9,56 @@ const DesignDevelopment = () => {
   const services = [
     {
       icon: Code,
-      title: "Frontend Development",
-      description: "Modern web applications built with React, TypeScript, and cutting-edge technologies.",
+      title: "Design & Simulation Tools",
+      description: "Advanced CAD and simulation software for designing and testing robotic systems and automotive components before physical prototyping.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Smartphone,
-      title: "Mobile App Development",
-      description: "Cross-platform mobile applications for iOS and Android platforms.",
+      title: "Hardware Design",
+      description: "Custom PCB design and electronic hardware development for robotics control systems and automotive sensor networks.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Database,
-      title: "Backend Systems",
-      description: "Scalable backend architectures with robust APIs and database design.",
+      title: "Open Source",
+      description: "Open-source robotics frameworks and automotive control libraries for accelerated development and community collaboration.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Cloud,
-      title: "Cloud Integration",
-      description: "Cloud-native solutions with modern deployment and scaling strategies.",
+      title: "Reference Design",
+      description: "Proven reference architectures and design patterns for robotics applications and automotive control systems.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Zap,
-      title: "Performance Optimization",
-      description: "High-performance applications optimized for speed and efficiency.",
+      title: "Performance & Durability",
+      description: "Testing and validation solutions for ensuring robotics systems meet performance requirements and automotive durability standards.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Shield,
-      title: "Security Solutions",
-      description: "Secure development practices with comprehensive security implementations.",
+      title: "Software Design",
+      description: "Embedded software architecture and real-time control algorithms for robotics and automotive safety-critical applications.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Cpu,
-      title: "System Architecture",
-      description: "Scalable system design and architecture for complex applications.",
+      title: "Labs Training",
+      description: "Hands-on laboratory training programs for robotics research methodologies and automotive system development.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Globe,
-      title: "Web Development",
-      description: "Full-stack web development with modern frameworks and tools.",
+      title: "Tools & Software",
+      description: "Specialized development tools and software platforms for robotics programming and automotive system integration.",
       accent: "border-l-moss-medium"
     },
     {
       icon: Layers,
-      title: "API Development",
-      description: "RESTful and GraphQL APIs designed for scalability and maintainability.",
+      title: "Updates",
+      description: "Continuous updates and improvements to research tools, methodologies, and best practices in robotics and automotive development.",
       accent: "border-l-moss-medium"
     }
   ];
@@ -83,13 +83,13 @@ const DesignDevelopment = () => {
       <section className="bg-moss-medium py-4 overflow-hidden">
         <div className="flex animate-pulse">
           <div className="flex items-center space-x-8 text-black font-bold text-lg whitespace-nowrap">
-            <span>Frontend Development</span>
+            <span>Design & Development</span>
             <span>⚡</span>
-            <span>Backend Systems</span>
+            <span>Embedded Development</span>
             <span>⚡</span>
-            <span>Mobile Apps</span>
+            <span>Design & Development Tools</span>
             <span>⚡</span>
-            <span>Cloud Solutions</span>
+            <span>Educational Resources</span>
             <span>⚡</span>
           </div>
         </div>
@@ -214,13 +214,13 @@ const DesignDevelopment = () => {
       <section className="bg-moss-medium py-4 overflow-hidden">
         <div className="flex animate-pulse">
           <div className="flex items-center space-x-8 text-black font-bold text-lg whitespace-nowrap">
-            <span>Frontend Development</span>
+            <span>Design & Development</span>
             <span>⚡</span>
-            <span>Backend Systems</span>
+            <span>Embedded Development</span>
             <span>⚡</span>
-            <span>Mobile Apps</span>
+            <span>Design & Development Tools</span>
             <span>⚡</span>
-            <span>Cloud Solutions</span>
+            <span>Educational Resources</span>
             <span>⚡</span>
           </div>
         </div>
