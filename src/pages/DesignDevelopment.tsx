@@ -1,8 +1,13 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers } from 'lucide-react';
+import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput } from 'lucide-react';
 
 const DesignDevelopment = () => {
   const services = [
@@ -130,53 +135,183 @@ const DesignDevelopment = () => {
 
       {/* Contact Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center space-x-2 mb-4">
-            <span className="text-moss-medium">⚡</span>
-            <span className="text-gray-600">Contact Me</span>
-            <span className="text-moss-medium">⚡</span>
-          </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">
-            Let's Talk for <span className="text-moss-medium">Your</span>
-          </h2>
-          <h2 className="text-4xl font-bold text-gray-900 mb-12">
-            <span className="text-moss-medium">Next Projects</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            <div>
-              <label className="block text-left text-gray-700 font-medium mb-2">Your Name *</label>
-              <input 
-                type="text" 
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-moss-medium focus:border-transparent"
-                placeholder="Enter your name"
-              />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 mb-4">
+              <span className="text-moss-medium">⚡</span>
+              <span className="text-gray-600">Contact Me</span>
+              <span className="text-moss-medium">⚡</span>
             </div>
-            <div>
-              <label className="block text-left text-gray-700 font-medium mb-2">Email *</label>
-              <input 
-                type="email" 
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-moss-medium focus:border-transparent"
-                placeholder="Enter your email"
-              />
+            <h2 className="text-4xl font-bold text-gray-900 mb-2">
+              Let's Talk for <span className="text-moss-medium">Your</span>
+            </h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-12">
+              <span className="text-moss-medium">Next Projects</span>
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* General Contact Form */}
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">General Contact</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <Label htmlFor="general-name" className="text-gray-700 font-medium mb-2">Your Name *</Label>
+                  <Input 
+                    id="general-name"
+                    type="text" 
+                    className="focus:ring-2 focus:ring-moss-medium focus:border-transparent"
+                    placeholder="Enter your name"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="general-email" className="text-gray-700 font-medium mb-2">Email *</Label>
+                  <Input 
+                    id="general-email"
+                    type="email" 
+                    className="focus:ring-2 focus:ring-moss-medium focus:border-transparent"
+                    placeholder="Enter your email"
+                  />
+                </div>
+              </div>
+              
+              <div className="mb-6">
+                <Label htmlFor="general-message" className="text-gray-700 font-medium mb-2">Message</Label>
+                <Textarea 
+                  id="general-message"
+                  rows={4}
+                  className="focus:ring-2 focus:ring-moss-medium focus:border-transparent"
+                  placeholder="Tell us about your project..."
+                />
+              </div>
+              
+              <Button 
+                size="lg" 
+                className="w-full bg-moss-medium hover:bg-moss-dark text-black hover:text-white px-8 py-3 text-lg font-semibold rounded-lg"
+              >
+                Send Message
+              </Button>
+            </div>
+
+            {/* Hardware Development Form */}
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Hardware Development & Manufacturing</h3>
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="hw-name" className="text-gray-700 font-medium mb-2">Name *</Label>
+                    <Input 
+                      id="hw-name"
+                      type="text" 
+                      className="focus:ring-2 focus:ring-moss-medium focus:border-transparent"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="hw-email" className="text-gray-700 font-medium mb-2">Email *</Label>
+                    <Input 
+                      id="hw-email"
+                      type="email" 
+                      className="focus:ring-2 focus:ring-moss-medium focus:border-transparent"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="company-name" className="text-gray-700 font-medium mb-2">Company Name</Label>
+                    <Input 
+                      id="company-name"
+                      type="text" 
+                      className="focus:ring-2 focus:ring-moss-medium focus:border-transparent"
+                      placeholder="Your company"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="nationality" className="text-gray-700 font-medium mb-2">Nationality</Label>
+                    <Input 
+                      id="nationality"
+                      type="text" 
+                      className="focus:ring-2 focus:ring-moss-medium focus:border-transparent"
+                      placeholder="Your nationality"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="company-address" className="text-gray-700 font-medium mb-2">Company Address</Label>
+                  <Textarea 
+                    id="company-address"
+                    rows={2}
+                    className="focus:ring-2 focus:ring-moss-medium focus:border-transparent"
+                    placeholder="Full company address"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="service-type" className="text-gray-700 font-medium mb-2">Service Type *</Label>
+                    <Select>
+                      <SelectTrigger className="focus:ring-2 focus:ring-moss-medium focus:border-transparent">
+                        <SelectValue placeholder="Select service type" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-white border border-gray-300 shadow-lg z-50">
+                        <SelectItem value="development">Development</SelectItem>
+                        <SelectItem value="research">Research</SelectItem>
+                        <SelectItem value="manufacturing">Manufacturing</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div>
+                    <Label htmlFor="subject" className="text-gray-700 font-medium mb-2">Subject Line *</Label>
+                    <Input 
+                      id="subject"
+                      type="text" 
+                      className="focus:ring-2 focus:ring-moss-medium focus:border-transparent"
+                      placeholder="Brief subject"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="project-description" className="text-gray-700 font-medium mb-2">Project Description *</Label>
+                  <Textarea 
+                    id="project-description"
+                    rows={4}
+                    className="focus:ring-2 focus:ring-moss-medium focus:border-transparent"
+                    placeholder="Describe your hardware project, requirements, and goals..."
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="project-files" className="text-gray-700 font-medium mb-2">Project Files</Label>
+                  <div className="mt-2 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-moss-medium transition-colors">
+                    <div className="space-y-1 text-center">
+                      <FileInput className="mx-auto h-12 w-12 text-gray-400" />
+                      <div className="flex text-sm text-gray-600">
+                        <label htmlFor="project-files" className="relative cursor-pointer bg-white rounded-md font-medium text-moss-medium hover:text-moss-dark focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-moss-medium">
+                          <span>Upload files</span>
+                          <input id="project-files" name="project-files" type="file" className="sr-only" multiple />
+                        </label>
+                        <p className="pl-1">or drag and drop</p>
+                      </div>
+                      <p className="text-xs text-gray-500">
+                        PDF, DOC, images up to 10MB each
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <Button 
+                  size="lg" 
+                  className="w-full bg-moss-medium hover:bg-moss-dark text-black hover:text-white px-8 py-3 text-lg font-semibold rounded-lg"
+                >
+                  Submit Hardware Inquiry
+                </Button>
+              </div>
             </div>
           </div>
-          
-          <div className="mt-8 max-w-2xl mx-auto">
-            <label className="block text-left text-gray-700 font-medium mb-2">Address</label>
-            <textarea 
-              rows={4}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-moss-medium focus:border-transparent"
-              placeholder="Tell us about your project..."
-            ></textarea>
-          </div>
-          
-          <Button 
-            size="lg" 
-            className="mt-8 bg-moss-medium hover:bg-moss-dark text-black hover:text-white px-8 py-3 text-lg font-semibold rounded-full"
-          >
-            Send Message
-          </Button>
         </div>
       </section>
 
