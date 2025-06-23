@@ -4,12 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, Monitor, Layout, Lightbulb, User, Image, Palette } from 'lucide-react';
+import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers } from 'lucide-react';
 
 const OurWork = () => {
   const projects = [
     {
-      icon: Monitor,
+      icon: Code,
       title: "Autonomous Navigation System",
       description: "Advanced robotics navigation system using LIDAR and computer vision for warehouse automation.",
       products: ["Development Boards", "Sensors", "Communication Networks"],
@@ -55,30 +55,6 @@ const OurWork = () => {
       products: ["Development Boards", "Edge CAN Networks", "Sensors"],
       developmentFields: ["Software Design", "Hardware Design", "Performance & Durability"],
       accent: "border-l-moss-medium"
-    },
-    {
-      icon: Cpu,
-      title: "Machine Learning Edge Device",
-      description: "Embedded AI processing unit for real-time computer vision in industrial applications.",
-      products: ["Development Boards", "Tools & Software", "Components & Parts"],
-      developmentFields: ["Design & Simulation Tools", "Software Design", "Labs Training"],
-      accent: "border-l-moss-medium"
-    },
-    {
-      icon: Globe,
-      title: "Wireless Sensor Network",
-      description: "Low-power mesh network for environmental monitoring in smart agriculture systems.",
-      products: ["Communication Networks", "Sensors", "Power"],
-      developmentFields: ["Open Source", "Reference Design", "Updates"],
-      accent: "border-l-moss-medium"
-    },
-    {
-      icon: Layers,
-      title: "Modular Robotics Platform",
-      description: "Reconfigurable robotics framework for research and educational applications.",
-      products: ["Development Boards", "Actuators", "Tools & Software"],
-      developmentFields: ["Labs Training", "Open Source", "Design & Simulation Tools"],
-      accent: "border-l-moss-medium"
     }
   ];
 
@@ -86,43 +62,37 @@ const OurWork = () => {
     {
       url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
       alt: "Autonomous Robotics Research",
-      title: "Autonomous Navigation Systems",
-      link: "#autonomous-navigation"
+      title: "Autonomous Navigation Systems"
     },
     {
       url: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=400&fit=crop",
       alt: "Automotive Control Systems",
-      title: "Smart Vehicle Control",
-      link: "#vehicle-control"
+      title: "Smart Vehicle Control"
     },
     {
       url: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=400&fit=crop",
       alt: "Industrial IoT Solutions",
-      title: "Industrial IoT Platform",
-      link: "#iot-platform"
+      title: "Industrial IoT Platform"
     },
     {
       url: "https://images.unsplash.com/photo-1606662829225-2b7d10ba6ac6?w=800&h=400&fit=crop",
       alt: "Robotic Arm Development",
-      title: "Robotic Arm Control",
-      link: "#robotic-arm"
+      title: "Robotic Arm Control"
     },
     {
       url: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=400&fit=crop",
       alt: "Energy Management Research",
-      title: "Energy Management Systems",
-      link: "#energy-management"
+      title: "Energy Management Systems"
     },
     {
       url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop",
       alt: "Safety Critical Systems",
-      title: "Safety Critical ECU",
-      link: "#safety-ecu"
+      title: "Safety Critical ECU"
     }
   ];
 
-  const handleImageClick = (link: string) => {
-    console.log(`Clicked on: ${link}`);
+  const handleImageClick = (title: string) => {
+    console.log(`Clicked on: ${title}`);
   };
 
   return (
@@ -172,7 +142,7 @@ const OurWork = () => {
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div 
                     className="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105"
-                    onClick={() => handleImageClick(image.link)}
+                    onClick={() => handleImageClick(image.title)}
                   >
                     <img 
                       src={image.url} 
@@ -276,27 +246,11 @@ const OurWork = () => {
         {/* Floating Tags */}
         <div className="relative mt-16 overflow-hidden">
           <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
-            {['Autonomous Systems', 'Automotive Control', 'IoT Solutions', 'Robotics', 'Energy Management', 'Safety Systems', 'Machine Learning', 'Wireless Networks', 'Research & Development'].map((tag, index) => (
+            {['Autonomous Systems', 'Automotive Control', 'IoT Solutions', 'Robotics', 'Energy Management', 'Safety Systems'].map((tag, index) => (
               <span key={index} className="bg-moss-medium text-black px-4 py-2 rounded-full text-sm font-medium">
                 {tag}
               </span>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bottom Banner */}
-      <section className="bg-moss-medium py-4 overflow-hidden">
-        <div className="flex animate-pulse">
-          <div className="flex items-center space-x-8 text-black font-bold text-base whitespace-nowrap">
-            <span>Research Projects</span>
-            <span>⚡</span>
-            <span>Innovation</span>
-            <span>⚡</span>
-            <span>Technology Solutions</span>
-            <span>⚡</span>
-            <span>Applied Research</span>
-            <span>⚡</span>
           </div>
         </div>
       </section>
