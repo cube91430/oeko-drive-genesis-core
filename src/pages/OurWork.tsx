@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers } from 'lucide-react';
+import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, Beaker, Microscope, FlaskConical } from 'lucide-react';
 
 const OurWork = () => {
   const projects = [
@@ -91,8 +90,55 @@ const OurWork = () => {
     }
   ];
 
+  const experiments = [
+    {
+      icon: Beaker,
+      title: "Quantum Control Interface",
+      description: "Experimental quantum computing control systems for next-generation processing units. Developing novel approaches to quantum gate control and error correction protocols.",
+      duration: "2023 - Present",
+      status: "Active Research",
+      team: "6 Researchers",
+      publications: 3,
+      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=300&fit=crop"
+    },
+    {
+      icon: Microscope,
+      title: "Neural Network Hardware Acceleration",
+      description: "Custom silicon design for AI inference acceleration in edge computing environments. Focus on power efficiency and real-time processing capabilities.",
+      duration: "2022 - 2024",
+      status: "Phase 2 Complete",
+      team: "8 Researchers",
+      publications: 5,
+      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=300&fit=crop"
+    },
+    {
+      icon: FlaskConical,
+      title: "Bio-Inspired Computing Systems",
+      description: "Research into neuromorphic computing architectures that mimic biological neural networks for ultra-low power AI applications.",
+      duration: "2021 - 2023",
+      status: "Published",
+      team: "4 Researchers",
+      publications: 7,
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=300&fit=crop"
+    },
+    {
+      icon: Cpu,
+      title: "Advanced Materials Testing",
+      description: "Exploration of new semiconductor materials for high-temperature and radiation-resistant electronic systems in extreme environments.",
+      duration: "2020 - 2022",
+      status: "Patent Filed",
+      team: "5 Researchers",
+      publications: 4,
+      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600&h=300&fit=crop"
+    }
+  ];
+
   const handleImageClick = (title: string) => {
     console.log(`Clicked on: ${title}`);
+  };
+
+  const handleExperimentClick = (title: string) => {
+    console.log(`Clicked on experiment: ${title}`);
   };
 
   return (
@@ -220,6 +266,80 @@ const OurWork = () => {
                 >
                   View Project →
                 </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Experiments Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 mb-4">
+              <span className="text-moss-medium">🧪</span>
+              <span className="text-gray-600">Advanced Research</span>
+              <span className="text-moss-medium">🧪</span>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900">
+              Our <span className="text-moss-medium">Experiments</span>
+            </h2>
+            <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
+              Explore our cutting-edge research initiatives that push the boundaries of technology and innovation
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {experiments.map((experiment, index) => (
+              <div 
+                key={index} 
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                onClick={() => handleExperimentClick(experiment.title)}
+              >
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={experiment.image} 
+                    alt={experiment.title}
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4 bg-moss-medium text-black px-3 py-1 rounded-full text-sm font-medium">
+                    {experiment.status}
+                  </div>
+                </div>
+                
+                <div className="p-8">
+                  <div className="flex items-center mb-4">
+                    <experiment.icon className="w-8 h-8 text-moss-medium mr-3" />
+                    <h3 className="text-xl font-bold text-gray-900">{experiment.title}</h3>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">{experiment.description}</p>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <span className="text-sm font-semibold text-gray-800 block">Duration</span>
+                      <span className="text-sm text-gray-600">{experiment.duration}</span>
+                    </div>
+                    <div>
+                      <span className="text-sm font-semibold text-gray-800 block">Team Size</span>
+                      <span className="text-sm text-gray-600">{experiment.team}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                        {experiment.publications} Publications
+                      </span>
+                    </div>
+                    <Button 
+                      variant="ghost" 
+                      className="text-moss-medium hover:text-moss-dark hover:bg-moss-light/10 p-0 h-auto font-medium"
+                    >
+                      Learn More →
+                    </Button>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
