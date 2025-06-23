@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Monitor, Smartphone, Layout, Layers, Lightbulb, Globe, User, Image, Palette } from 'lucide-react';
@@ -63,6 +63,34 @@ const Products = () => {
     }
   ];
 
+  const productImages = [
+    {
+      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop",
+      alt: "Development Boards and Laptops",
+      title: "Development Boards"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
+      alt: "Circuit Boards and Electronics",
+      title: "Electronic Components"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
+      alt: "Robotics and Automation",
+      title: "Robotics Systems"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=400&fit=crop",
+      alt: "Computing Hardware",
+      title: "Computing Solutions"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=400&fit=crop",
+      alt: "Display and Communication Systems",
+      title: "Communication Networks"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -92,6 +120,39 @@ const Products = () => {
             <span>Motor Control</span>
             <span>⚡</span>
           </div>
+        </div>
+      </section>
+
+      {/* Product Showcase Carousel */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Carousel 
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {productImages.map((image, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="relative group overflow-hidden rounded-lg shadow-lg">
+                    <img 
+                      src={image.url} 
+                      alt={image.alt}
+                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <h3 className="text-lg font-semibold">{image.title}</h3>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
         </div>
       </section>
 
