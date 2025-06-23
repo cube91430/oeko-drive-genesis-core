@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput } from 'lucide-react';
@@ -67,6 +67,51 @@ const DesignDevelopment = () => {
     }
   ];
 
+  const developmentImages = [
+    {
+      url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
+      alt: "Circuit Board and Electronic Components",
+      title: "Evaluation Boards & Modules",
+      link: "#evaluation-boards"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
+      alt: "Development Environment and Programming",
+      title: "Development Tools & IDE",
+      link: "#development-tools"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=400&fit=crop",
+      alt: "Hardware Development Setup",
+      title: "CAN Network Architecture",
+      link: "#can-network"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=400&fit=crop",
+      alt: "Software Development and Coding",
+      title: "Embedded Software Design",
+      link: "#embedded-software"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=800&h=400&fit=crop",
+      alt: "Innovation and Technology",
+      title: "Design & Simulation Tools",
+      link: "#simulation-tools"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
+      alt: "Programming and Development",
+      title: "Labs Training & Education",
+      link: "#labs-training"
+    }
+  ];
+
+  const handleImageClick = (link: string) => {
+    // For now, just scroll to top or handle navigation as needed
+    console.log(`Clicked on: ${link}`);
+    // You can implement actual navigation or modal opening here
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -96,6 +141,46 @@ const DesignDevelopment = () => {
             <span>Educational Resources</span>
             <span>⚡</span>
           </div>
+        </div>
+      </section>
+
+      {/* Development Showcase Carousel */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Carousel 
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {developmentImages.map((image, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div 
+                    className="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105"
+                    onClick={() => handleImageClick(image.link)}
+                  >
+                    <img 
+                      src={image.url} 
+                      alt={image.alt}
+                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <h3 className="text-lg font-semibold mb-1">{image.title}</h3>
+                      <p className="text-sm opacity-90">Click to explore</p>
+                    </div>
+                    <div className="absolute top-4 right-4 bg-moss-medium text-black px-2 py-1 rounded-full text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                      View Details
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
         </div>
       </section>
 
