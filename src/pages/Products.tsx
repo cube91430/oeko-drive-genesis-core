@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -57,7 +58,7 @@ const Products = () => {
     },
     {
       icon: Palette,
-      title: "Updates",
+      title: "Hardware Desktop",
       description: "Over-the-air firmware updates and system maintenance solutions for deployed robotics platforms.",
       accent: "border-l-moss-medium"
     }

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -49,7 +50,7 @@ const DesignDevelopment = () => {
     },
     {
       icon: Cpu,
-      title: "Labs Training",
+      title: "Desktop lab and Workshop",
       description: "Hands-on laboratory training programs for robotics research methodologies and automotive system development.",
       accent: "border-l-moss-medium"
     },
