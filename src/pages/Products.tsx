@@ -181,22 +181,35 @@ const Products = () => {
 
           {/* Featured Product - EV Conversion */}
           <div className="mb-12">
-            <div className="bg-gradient-to-r from-moss-light to-moss-medium rounded-xl p-8 border-l-4 border-l-moss-dark shadow-xl">
-              <div className="flex items-center mb-6">
-                <Car className="w-16 h-16 text-moss-dark mr-4" />
-                <div>
-                  <span className="inline-block bg-moss-dark text-white px-3 py-1 rounded-full text-sm font-medium mb-2">Featured Product</span>
-                  <h3 className="text-2xl font-bold text-moss-dark">EV Conversion</h3>
+            <div className="bg-gradient-to-r from-moss-light to-moss-medium rounded-xl overflow-hidden border-l-4 border-l-moss-dark shadow-xl">
+              <div className="flex flex-col lg:flex-row">
+                {/* Image Section */}
+                <div className="lg:w-1/2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=600&h=400&fit=crop"
+                    alt="Electric Vehicle Conversion Kit"
+                    className="w-full h-64 lg:h-full object-cover"
+                  />
+                </div>
+                {/* Content Section */}
+                <div className="lg:w-1/2 p-8">
+                  <div className="flex items-center mb-6">
+                    <Car className="w-16 h-16 text-moss-dark mr-4" />
+                    <div>
+                      <span className="inline-block bg-moss-dark text-white px-3 py-1 rounded-full text-sm font-medium mb-2">Featured Product</span>
+                      <h3 className="text-2xl font-bold text-moss-dark">EV Conversion</h3>
+                    </div>
+                  </div>
+                  <p className="text-moss-dark mb-6 leading-relaxed text-lg">
+                    Complete electric vehicle conversion kits and systems for transforming traditional vehicles into efficient electric alternatives. Our comprehensive solutions include motor controllers, battery management systems, and charging infrastructure.
+                  </p>
+                  <Button 
+                    className="bg-moss-dark hover:bg-moss-dark/90 text-white px-6 py-3 text-lg font-semibold rounded-lg"
+                  >
+                    Learn More About EV Conversion →
+                  </Button>
                 </div>
               </div>
-              <p className="text-moss-dark mb-6 leading-relaxed text-lg">
-                Complete electric vehicle conversion kits and systems for transforming traditional vehicles into efficient electric alternatives. Our comprehensive solutions include motor controllers, battery management systems, and charging infrastructure.
-              </p>
-              <Button 
-                className="bg-moss-dark hover:bg-moss-dark/90 text-white px-6 py-3 text-lg font-semibold rounded-lg"
-              >
-                Learn More About EV Conversion →
-              </Button>
             </div>
           </div>
 
