@@ -9,7 +9,7 @@ import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import CallToAction from '../components/CallToAction';
 import Blog from '../components/Blog';
-import Stats from '../components/Stats';
+import LocalBuildStats from '../components/LocalBuildStats';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -62,9 +62,9 @@ const Index = () => {
       <Features />
       <Services />
       <Portfolio />
+      <LocalBuildStats />
       <CallToAction />
       <Blog />
-      <Stats />
       <Footer />
     </div>
   );

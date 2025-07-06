@@ -36,10 +36,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-2 text-moss-light">
-              <li>Email: hello@oekodrive.com</li>
-              <li>Phone: +1 (555) 123-4567</li>
-              <li>Address: 123 Tech Street</li>
-              <li>San Francisco, CA 94105</li>
+              <li>Email: oekodrive@gmail.com</li>
+              <li>Phone: (+62) 812 8603 5867</li>
+              <li>Address: Jl. Cluster Monaco W7/ No. 34</li>
+              <li>Cibubur, Bogor Regency, West Java</li>
             </ul>
           </div>
         </div>

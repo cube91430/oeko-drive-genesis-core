@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -95,10 +94,10 @@ const Contact = () => {
                   <CardContent>
                     <address className="not-italic text-slate-600">
                       OekoDrive Technologies<br />
-                      123 Innovation Drive<br />
-                      Tech Hub District<br />
-                      San Francisco, CA 94105<br />
-                      United States
+                      Jl. Cluster Monaco W7/ No. 34<br />
+                      Cluster Monaco, Kotawisata, Cibubur<br />
+                      Bogor Regency, West Java<br />
+                      Indonesia
                     </address>
                   </CardContent>
                 </Card>
@@ -113,9 +112,8 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-slate-600">
-                      <strong>Main Office:</strong> +1 (555) 123-4567<br />
-                      <strong>Support:</strong> +1 (555) 987-6543<br />
-                      <strong>Sales:</strong> +1 (555) 456-7890
+                      <strong>Main Office:</strong> (+62) 812 8603 5867<br />
+                      <strong>Email:</strong> oekodrive@gmail.com
                     </p>
                   </CardContent>
                 </Card>
