@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput } from 'lucide-react';
+import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput, Plane, Settings, Wrench } from 'lucide-react';
 
 const DesignDevelopment = () => {
   const services = [
@@ -65,6 +64,30 @@ const DesignDevelopment = () => {
       title: "Updates",
       description: "Continuous updates and improvements to research tools, methodologies, and best practices in robotics and automotive development.",
       accent: "border-l-moss-medium"
+    }
+  ];
+
+  const specializedSections = [
+    {
+      icon: Plane,
+      title: "OekoFly",
+      description: "Advanced flight control systems and autonomous drone technology for aerial robotics applications. Features include intelligent navigation, obstacle avoidance, and real-time telemetry systems.",
+      color: "from-blue-400 to-blue-600",
+      accent: "border-l-blue-500"
+    },
+    {
+      icon: Settings,
+      title: "OekoSystem",
+      description: "Comprehensive system integration platform for managing complex robotics ecosystems. Provides unified control, monitoring, and coordination across multiple robotic units and IoT devices.",
+      color: "from-green-400 to-green-600",
+      accent: "border-l-green-500"
+    },
+    {
+      icon: Wrench,
+      title: "OekoTools",
+      description: "Professional development toolkit featuring specialized hardware and software tools for robotics prototyping, testing, and deployment. Includes debugging interfaces and performance analysis utilities.",
+      color: "from-orange-400 to-orange-600",
+      accent: "border-l-orange-500"
     }
   ];
 
@@ -133,20 +156,55 @@ const DesignDevelopment = () => {
       <section className="bg-moss-medium py-4 overflow-hidden">
         <div className="flex animate-pulse">
           <div className="flex items-center space-x-8 text-black font-bold text-base whitespace-nowrap">
+            <span>OekoFly</span>
+            <span>⚡</span>
+            <span>OekoSystem</span>
+            <span>⚡</span>
+            <span>OekoTools</span>
+            <span>⚡</span>
             <span>Design & Development</span>
             <span>⚡</span>
             <span>Embedded Development</span>
-            <span>⚡</span>
-            <span>Design & Development Tools</span>
-            <span>⚡</span>
-            <span>Educational Resources</span>
             <span>⚡</span>
           </div>
         </div>
       </section>
 
+      {/* Specialized Sections - OekoFly, OekoSystem, OekoTools */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 mb-4">
+              <span className="text-moss-medium">⚡</span>
+              <span className="text-gray-600">Specialized Solutions</span>
+              <span className="text-moss-medium">⚡</span>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900">
+              <span className="text-moss-medium">Oeko</span> Product Line
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+            {specializedSections.map((section, index) => (
+              <div key={index} className={`bg-gradient-to-br ${section.color} rounded-xl p-8 text-white shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1`}>
+                <div className="mb-6">
+                  <section.icon className="w-16 h-16 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
+                <p className="text-white/90 mb-6 leading-relaxed">{section.description}</p>
+                <Button 
+                  className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-2 font-semibold rounded-lg"
+                >
+                  Explore {section.title} →
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Development Showcase Carousel */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Carousel 
             opts={{
@@ -421,7 +479,7 @@ const DesignDevelopment = () => {
         {/* Floating Tags */}
         <div className="relative mt-16 overflow-hidden">
           <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
-            {['React Development', 'Node.js', 'TypeScript', 'Cloud Architecture', 'Mobile Development', 'API Design', 'Database Design', 'DevOps', 'Security', 'Performance'].map((tag, index) => (
+            {['OekoFly', 'OekoSystem', 'OekoTools', 'React Development', 'Node.js', 'TypeScript', 'Cloud Architecture', 'Mobile Development', 'API Design', 'Database Design', 'DevOps', 'Security', 'Performance'].map((tag, index) => (
               <span key={index} className="bg-moss-medium text-black px-4 py-2 rounded-full text-sm font-medium">
                 {tag}
               </span>
@@ -434,13 +492,15 @@ const DesignDevelopment = () => {
       <section className="bg-moss-medium py-4 overflow-hidden">
         <div className="flex animate-pulse">
           <div className="flex items-center space-x-8 text-black font-bold text-base whitespace-nowrap">
+            <span>OekoFly</span>
+            <span>⚡</span>
+            <span>OekoSystem</span>
+            <span>⚡</span>
+            <span>OekoTools</span>
+            <span>⚡</span>
             <span>Design & Development</span>
             <span>⚡</span>
             <span>Embedded Development</span>
-            <span>⚡</span>
-            <span>Design & Development Tools</span>
-            <span>⚡</span>
-            <span>Educational Resources</span>
             <span>⚡</span>
           </div>
         </div>

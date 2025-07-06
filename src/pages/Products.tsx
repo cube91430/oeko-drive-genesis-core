@@ -1,13 +1,19 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Monitor, Smartphone, Layout, Layers, Lightbulb, Globe, User, Image, Palette } from 'lucide-react';
+import { Monitor, Smartphone, Layout, Layers, Lightbulb, Globe, User, Image, Palette, Car } from 'lucide-react';
 
 const Products = () => {
   const services = [
+    {
+      icon: Car,
+      title: "EV Conversion",
+      description: "Complete electric vehicle conversion kits and systems for transforming traditional vehicles into efficient electric alternatives. Our comprehensive solutions include motor controllers, battery management systems, and charging infrastructure.",
+      accent: "border-l-moss-medium",
+      featured: true
+    },
     {
       icon: Monitor,
       title: "Development Boards",
@@ -112,6 +118,8 @@ const Products = () => {
       <section className="bg-moss-medium py-4 overflow-hidden">
         <div className="flex animate-pulse justify-center">
           <div className="flex items-center space-x-8 text-black font-bold text-lg whitespace-nowrap">
+            <span>EV Conversion</span>
+            <span>⚡</span>
             <span>Prototyping</span>
             <span>⚡</span>
             <span>Edge CAN</span>
@@ -171,8 +179,29 @@ const Products = () => {
             </h2>
           </div>
 
+          {/* Featured Product - EV Conversion */}
+          <div className="mb-12">
+            <div className="bg-gradient-to-r from-moss-light to-moss-medium rounded-xl p-8 border-l-4 border-l-moss-dark shadow-xl">
+              <div className="flex items-center mb-6">
+                <Car className="w-16 h-16 text-moss-dark mr-4" />
+                <div>
+                  <span className="inline-block bg-moss-dark text-white px-3 py-1 rounded-full text-sm font-medium mb-2">Featured Product</span>
+                  <h3 className="text-2xl font-bold text-moss-dark">EV Conversion</h3>
+                </div>
+              </div>
+              <p className="text-moss-dark mb-6 leading-relaxed text-lg">
+                Complete electric vehicle conversion kits and systems for transforming traditional vehicles into efficient electric alternatives. Our comprehensive solutions include motor controllers, battery management systems, and charging infrastructure.
+              </p>
+              <Button 
+                className="bg-moss-dark hover:bg-moss-dark/90 text-white px-6 py-3 text-lg font-semibold rounded-lg"
+              >
+                Learn More About EV Conversion →
+              </Button>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.filter(service => !service.featured).map((service, index) => (
               <div key={index} className={`bg-gray-50 rounded-lg p-8 border-l-4 ${service.accent} hover:shadow-lg transition-shadow`}>
                 <div className="mb-6">
                   <service.icon className="w-12 h-12 text-gray-700" />
@@ -211,7 +240,7 @@ const Products = () => {
         {/* Floating Tags */}
         <div className="relative mt-16 overflow-hidden">
           <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
-            {['Prototyping', 'Edge CAN Networks', 'Sensor Integration', 'Motor Control', 'Development Boards', 'Power Systems', 'Communication Networks', 'Actuators', 'Components & Parts', 'Robotics Software'].map((tag, index) => (
+            {['EV Conversion', 'Prototyping', 'Edge CAN Networks', 'Sensor Integration', 'Motor Control', 'Development Boards', 'Power Systems', 'Communication Networks', 'Actuators', 'Components & Parts', 'Robotics Software'].map((tag, index) => (
               <span key={index} className="bg-moss-medium text-black px-4 py-2 rounded-full text-sm font-medium">
                 {tag}
               </span>
@@ -224,6 +253,8 @@ const Products = () => {
       <section className="bg-moss-medium py-4 overflow-hidden">
         <div className="flex animate-pulse justify-center">
           <div className="flex items-center space-x-8 text-black font-bold text-lg whitespace-nowrap">
+            <span>EV Conversion</span>
+            <span>⚡</span>
             <span>Prototyping</span>
             <span>⚡</span>
             <span>Edge CAN</span>
