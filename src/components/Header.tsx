@@ -24,6 +24,7 @@ const Header = () => {
               <a href="#features" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Features</a>
               <a href="/products" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Products</a>
               <a href="/design-development" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Design & Development</a>
+              <a href="/community" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Community</a>
               <a href="/our-work" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Our Work</a>
               <a href="/contact" className="text-slate-600 hover:text-moss-medium px-3 py-2 text-sm font-medium transition-colors">Contact</a>
             </div>
@@ -45,6 +46,7 @@ const Header = () => {
               <a href="#features" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Features</a>
               <a href="/products" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Products</a>
               <a href="/design-development" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Design & Development</a>
+              <a href="/community" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Community</a>
               <a href="/our-work" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Our Work</a>
               <a href="/contact" className="text-slate-600 hover:text-moss-medium block px-3 py-2 text-base font-medium">Contact</a>
             </div>
