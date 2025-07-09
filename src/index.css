@@ -46,12 +46,12 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Moss Color Palette Custom Variables */
-    --moss-dark: #006270;
-    --moss-medium: #009394;
-    --moss-light: #00e0c7;
-    --moss-white: #ffffff;
-    --moss-dark-bg: #2d3748;
+    /* Brand Color Palette from Logo */
+    --brand-primary: 160 70% 45%;
+    --brand-secondary: 160 85% 35%;
+    --brand-light: 160 60% 65%;
+    --brand-dark: 160 80% 25%;
+    --brand-accent: 160 45% 80%;
   }
 
   .dark {
@@ -103,13 +103,30 @@
   }
 }
 
-/* Moss color utility classes */
+/* Brand color utility classes */
 @layer utilities {
-  .bg-moss-dark { background-color: var(--moss-dark); }
-  .bg-moss-medium { background-color: var(--moss-medium); }
-  .bg-moss-light { background-color: var(--moss-light); }
-  .text-moss-dark { color: var(--moss-dark); }
-  .text-moss-medium { color: var(--moss-medium); }
-  .text-moss-light { color: var(--moss-light); }
-  .border-moss-medium { border-color: var(--moss-medium); }
+  .bg-brand-primary { background-color: hsl(var(--brand-primary)); }
+  .bg-brand-secondary { background-color: hsl(var(--brand-secondary)); }
+  .bg-brand-light { background-color: hsl(var(--brand-light)); }
+  .bg-brand-dark { background-color: hsl(var(--brand-dark)); }
+  .bg-brand-accent { background-color: hsl(var(--brand-accent)); }
+  
+  .text-brand-primary { color: hsl(var(--brand-primary)); }
+  .text-brand-secondary { color: hsl(var(--brand-secondary)); }
+  .text-brand-light { color: hsl(var(--brand-light)); }
+  .text-brand-dark { color: hsl(var(--brand-dark)); }
+  .text-brand-accent { color: hsl(var(--brand-accent)); }
+  
+  .border-brand-primary { border-color: hsl(var(--brand-primary)); }
+  .border-brand-secondary { border-color: hsl(var(--brand-secondary)); }
+  .border-brand-light { border-color: hsl(var(--brand-light)); }
+  
+  /* Legacy moss colors mapped to brand colors for backward compatibility */
+  .bg-moss-dark { background-color: hsl(var(--brand-dark)); }
+  .bg-moss-medium { background-color: hsl(var(--brand-primary)); }
+  .bg-moss-light { background-color: hsl(var(--brand-light)); }
+  .text-moss-dark { color: hsl(var(--brand-dark)); }
+  .text-moss-medium { color: hsl(var(--brand-primary)); }
+  .text-moss-light { color: hsl(var(--brand-light)); }
+  .border-moss-medium { border-color: hsl(var(--brand-primary)); }
 }
