@@ -29,10 +29,10 @@ const Services = () => {
             <div key={index} className="text-center">
               <div className="bg-moss-medium rounded-xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-moss-light mb-6 flex-grow">{service.description}</p>
+                <p className="text-white mb-6 flex-grow">{service.description}</p>
                 <div className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
-                    <div key={idx} className="text-sm text-moss-light">• {feature}</div>
+                    <div key={idx} className="text-sm text-white">• {feature}</div>
                   ))}
                 </div>
                 <Button variant="outline" className="border-moss-light text-moss-light hover:bg-moss-light hover:text-moss-dark">
