@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center space-x-3">
-              <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/52a01973-f704-4970-829d-107fc03a823b.png" 
                   alt="OekoDrive Logo"
