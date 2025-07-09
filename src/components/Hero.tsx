@@ -12,13 +12,13 @@ const Hero = () => {
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 Dream, Build, Deploy
               </h1>
-              <p className="text-xl md:text-2xl text-black leading-relaxed">
+              <p className="text-xl md:text-2xl text-white leading-relaxed">
                 Open Source Modules for System Control, Flexible Analysis, and High Performance Motor Control in Robotics and Physical AI Applications
               </p>
             </div>
             
             <div className="space-y-4">
-              <p className="text-lg text-slate-400">
+              <p className="text-lg text-white">
                 Empowering the future of robotics with cutting-edge ROS2 compatible modules designed for developers, researchers, and innovators.
               </p>
             </div>
@@ -33,7 +33,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-slate-300 text-slate-300 hover:bg-brand-light hover:text-brand-dark hover:border-brand-light px-8 py-3 text-lg font-semibold rounded-lg transition-all"
+                className="bg-brand-primary border-brand-primary text-white hover:bg-brand-secondary hover:border-brand-secondary px-8 py-3 text-lg font-semibold rounded-lg transition-all"
               >
                 Learn More
               </Button>
