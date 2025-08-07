@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Monitor, Smartphone, Layout, Layers, Lightbulb, Globe, User, Image, Palette, Car } from 'lucide-react';
+import { Monitor, Smartphone, Layout, Layers, Lightbulb, Globe, User, Image, Palette, Car, Sprout } from 'lucide-react';
 
 const Products = () => {
   const services = [
@@ -11,6 +11,13 @@ const Products = () => {
       icon: Car,
       title: "EV Conversion",
       description: "Complete electric vehicle conversion kits and systems for transforming traditional vehicles into efficient electric alternatives. Our comprehensive solutions include motor controllers, battery management systems, and charging infrastructure.",
+      accent: "border-l-moss-medium",
+      featured: true
+    },
+    {
+      icon: Sprout,
+      title: "GRUT",
+      description: "Smart Farming product line designed for both indoor and outdoor farming applications. GRUT systems provide comprehensive coverage for large-scale crop monitoring, maintenance, and harvesting operations.",
       accent: "border-l-moss-medium",
       featured: true
     },
@@ -179,8 +186,9 @@ const Products = () => {
             </h2>
           </div>
 
-          {/* Featured Product - EV Conversion */}
-          <div className="mb-12">
+          {/* Featured Products - EV Conversion and GRUT */}
+          <div className="mb-12 space-y-8">
+            {/* EV Conversion Featured Product */}
             <div className="bg-gradient-to-r from-moss-light to-moss-medium rounded-xl overflow-hidden border-l-4 border-l-moss-dark shadow-xl">
               <div className="flex flex-col lg:flex-row">
                 {/* Image Section */}
@@ -207,6 +215,38 @@ const Products = () => {
                     className="bg-moss-dark hover:bg-moss-dark/90 text-white px-6 py-3 text-lg font-semibold rounded-lg"
                   >
                     Learn More About EV Conversion →
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* GRUT Featured Product */}
+            <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl overflow-hidden border-l-4 border-l-green-600 shadow-xl">
+              <div className="flex flex-col lg:flex-row">
+                {/* Image Section */}
+                <div className="lg:w-1/2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop"
+                    alt="Smart Farming GRUT System"
+                    className="w-full h-64 lg:h-full object-cover"
+                  />
+                </div>
+                {/* Content Section */}
+                <div className="lg:w-1/2 p-8">
+                  <div className="flex items-center mb-6">
+                    <Sprout className="w-16 h-16 text-green-700 mr-4" />
+                    <div>
+                      <span className="inline-block bg-green-700 text-white px-3 py-1 rounded-full text-sm font-medium mb-2">Smart Farming</span>
+                      <h3 className="text-2xl font-bold text-green-700">GRUT</h3>
+                    </div>
+                  </div>
+                  <p className="text-green-700 mb-6 leading-relaxed text-lg">
+                    Smart Farming product line designed for both indoor and outdoor farming applications. GRUT systems provide comprehensive coverage for large-scale crop monitoring, maintenance, and harvesting operations with autonomous capabilities.
+                  </p>
+                  <Button 
+                    className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 text-lg font-semibold rounded-lg"
+                  >
+                    Explore GRUT Solutions →
                   </Button>
                 </div>
               </div>

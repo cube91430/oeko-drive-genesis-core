@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput, Plane, Settings, Wrench } from 'lucide-react';
+import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput, Plane, Settings, Wrench, Network } from 'lucide-react';
 
 const DesignDevelopment = () => {
   const services = [
@@ -88,6 +88,13 @@ const DesignDevelopment = () => {
       description: "Professional development toolkit featuring specialized hardware and software tools for robotics prototyping, testing, and deployment. Includes debugging interfaces and performance analysis utilities.",
       color: "from-orange-400 to-orange-600",
       accent: "border-l-orange-500"
+    },
+    {
+      icon: Network,
+      title: "DAMN Network",
+      description: "Decentralized Autonomous Mesh Network (DAMN) provides autonomous edge-to-edge wireless mesh networking for connecting multiple nodes in data silos. Compatible with C2 (Command and Control) and JADC2 (Joint All-Domain Command and Control) systems.",
+      color: "from-purple-400 to-purple-600",
+      accent: "border-l-purple-500"
     }
   ];
 
@@ -184,7 +191,7 @@ const DesignDevelopment = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-20">
             {specializedSections.map((section, index) => (
               <div key={index} className={`bg-gradient-to-br ${section.color} rounded-xl p-8 text-white shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1`}>
                 <div className="mb-6">
