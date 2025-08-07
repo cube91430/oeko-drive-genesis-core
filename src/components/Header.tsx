@@ -7,7 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-card shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -46,7 +46,7 @@ const Header = () => {
 
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card shadow-lg">
               <a href="#features" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Features</a>
               <a href="/products" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Products</a>
               <a href="/design-development" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Design & Development</a>

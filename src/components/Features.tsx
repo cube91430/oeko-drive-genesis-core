@@ -27,11 +27,11 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-24 bg-slate-50">
+    <section id="features" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Features</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-foreground mb-4">Features</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Discover our comprehensive suite of open-source modules designed to accelerate your robotics development
           </p>
         </div>
@@ -42,13 +42,13 @@ const Features = () => {
               key={index}
               className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-200"
             >
-              <div className="flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6 mx-auto">
-                <feature.icon className="w-8 h-8 text-slate-700" />
+              <div className="flex items-center justify-center w-16 h-16 bg-muted rounded-full mb-6 mx-auto">
+                <feature.icon className="w-8 h-8 text-muted-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-4 text-center">
+              <h3 className="text-xl font-semibold text-card-foreground mb-4 text-center">
                 {feature.title}
               </h3>
-              <p className="text-slate-600 text-center leading-relaxed">
+              <p className="text-muted-foreground text-center leading-relaxed">
                 {feature.description}
               </p>
             </div>

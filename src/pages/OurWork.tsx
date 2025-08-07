@@ -142,11 +142,11 @@ const OurWork = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-white py-16">
+      <section className="bg-card py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Work</h1>
           <div className="flex items-center justify-center space-x-2 text-sm text-gray-600 mb-8">
@@ -174,7 +174,7 @@ const OurWork = () => {
       </section>
 
       {/* Project Showcase Carousel */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Carousel 
             opts={{
@@ -214,7 +214,7 @@ const OurWork = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 mb-4">

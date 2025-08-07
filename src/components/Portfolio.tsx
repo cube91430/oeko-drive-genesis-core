@@ -23,11 +23,11 @@ const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="work" className="py-24 bg-white">
+    <section id="work" className="py-24 bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Work</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+          <h2 className="text-4xl font-bold text-card-foreground mb-4">Our Work</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Explore our portfolio of innovative robotics and AI solutions
           </p>
           
@@ -51,21 +51,21 @@ const Portfolio = () => {
               key={project.id}
               className="group relative bg-slate-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="h-48 bg-gradient-to-br from-slate-600 to-slate-800 relative">
+              <div className="h-48 bg-gradient-to-br from-muted to-muted-foreground relative">
                 <img 
                   src={`https://images.unsplash.com/${project.image}?auto=format&fit=crop&w=400&h=300`}
                   alt={project.title}
                   className="w-full h-full object-cover opacity-80"
                 />
-                <div className="absolute inset-0 bg-slate-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Button size="sm" className="bg-emerald-600 hover:bg-emerald-700">
+                <div className="absolute inset-0 bg-background bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Button size="sm" className="bg-moss-medium hover:bg-moss-dark text-black hover:text-white">
                     View Details
                   </Button>
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="font-semibold text-slate-900 text-sm">{project.title}</h3>
-                <p className="text-slate-600 text-xs mt-1">{project.category}</p>
+                <h3 className="font-semibold text-card-foreground text-sm">{project.title}</h3>
+                <p className="text-muted-foreground text-xs mt-1">{project.category}</p>
               </div>
             </div>
           ))}
