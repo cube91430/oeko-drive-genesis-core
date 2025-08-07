@@ -106,14 +106,14 @@ const Products = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-white py-16">
+      <section className="bg-card py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Products</h1>
-          <div className="flex items-center justify-center space-x-2 text-sm text-gray-600 mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-card-foreground mb-4">Products</h1>
+          <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground mb-8">
             <span>Home</span>
             <span>/</span>
             <span className="text-moss-medium">Products</span>
@@ -140,7 +140,7 @@ const Products = () => {
       </section>
 
       {/* Product Showcase Carousel */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Carousel 
             opts={{
@@ -173,15 +173,15 @@ const Products = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 mb-4">
               <span className="text-moss-medium">⚡</span>
-              <span className="text-gray-600">My Specialization</span>
+              <span className="text-muted-foreground">My Specialization</span>
               <span className="text-moss-medium">⚡</span>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-4xl font-bold text-card-foreground">
               <span className="text-moss-medium">Products</span> I Provide
             </h2>
           </div>
@@ -255,13 +255,13 @@ const Products = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.filter(service => !service.featured).map((service, index) => (
-              <div key={index} className={`bg-gray-50 rounded-lg p-8 border-l-4 ${service.accent} hover:shadow-lg transition-shadow`}>
+              <div key={index} className={`bg-muted rounded-lg p-8 border-l-4 ${service.accent} hover:shadow-lg transition-shadow`}>
                 <div className="mb-6">
-                  <service.icon className="w-12 h-12 text-gray-700" />
+                  <service.icon className="w-12 h-12 text-muted-foreground" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                <Button 
+                <h3 className="text-xl font-bold text-card-foreground mb-4">{service.title}</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
+                <Button
                   variant="ghost" 
                   className="text-moss-medium hover:text-moss-dark hover:bg-moss-light/10 p-0 h-auto font-medium"
                 >
@@ -274,7 +274,7 @@ const Products = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-white text-center">
+      <section className="py-20 bg-background text-foreground text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-4">
             Let's Create an <span className="text-moss-medium">Amazing</span>
