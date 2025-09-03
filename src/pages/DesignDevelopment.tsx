@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput, Plane, Settings, Wrench, Network, Satellite } from 'lucide-react';
+import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput, Plane, Settings, Wrench, Network, Satellite, Factory } from 'lucide-react';
 
 const DesignDevelopment = () => {
   const services = [
@@ -102,6 +102,13 @@ const DesignDevelopment = () => {
       description: "Oeko GPS-Denied Architecture, Node, and Module enable robots and sensors to locate and communicate without the use of GPS sensors. Advanced positioning system for environments where GPS is unavailable or compromised.",
       color: "from-red-400 to-red-600",
       accent: "border-l-red-500"
+    },
+    {
+      icon: Factory,
+      title: "Edge Manufacturing",
+      description: "Edge manufacturing solutions allow users to create resources on the edge, enabling distributed production capabilities and real-time manufacturing processes at the point of need.",
+      color: "from-teal-400 to-teal-600",
+      accent: "border-l-teal-500"
     }
   ];
 
