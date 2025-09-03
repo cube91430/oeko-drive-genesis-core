@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput, Plane, Settings, Wrench, Network, Satellite, Factory } from 'lucide-react';
+import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput, Plane, Settings, Wrench, Network, Satellite, Factory, Wheat, Cog, MapPin, ArrowRight, CheckCircle, X } from 'lucide-react';
 
 const DesignDevelopment = () => {
+  const [isEdgeManufacturingModalOpen, setIsEdgeManufacturingModalOpen] = useState(false);
+
   const services = [
     {
       icon: Code,
@@ -112,6 +117,68 @@ const DesignDevelopment = () => {
     }
   ];
 
+  const edgeManufacturingApplications = [
+    {
+      icon: Network,
+      title: "Edge-to-Edge Manufacturing",
+      description: "Seamless connection and coordination between distributed manufacturing nodes, enabling real-time production optimization across multiple locations.",
+      features: [
+        "Real-time production synchronization",
+        "Distributed quality control",
+        "Cross-location resource sharing",
+        "Automated workflow orchestration"
+      ],
+      color: "from-blue-400 to-blue-600"
+    },
+    {
+      icon: Wheat,
+      title: "Edge Farming",
+      description: "Localized agricultural production systems that utilize edge computing for precision farming, automated monitoring, and resource optimization.",
+      features: [
+        "Precision agriculture sensors",
+        "Automated irrigation systems",
+        "Real-time crop monitoring",
+        "Weather-responsive farming"
+      ],
+      color: "from-green-400 to-green-600"
+    },
+    {
+      icon: Cog,
+      title: "Edge Production",
+      description: "On-demand manufacturing at the point of consumption, reducing supply chain dependencies and enabling rapid response to local needs.",
+      features: [
+        "On-demand manufacturing",
+        "Local resource utilization",
+        "Reduced transportation costs",
+        "Rapid prototyping capabilities"
+      ],
+      color: "from-purple-400 to-purple-600"
+    }
+  ];
+
+  const edgeManufacturingBenefits = [
+    {
+      icon: Zap,
+      title: "Reduced Latency",
+      description: "Process data and make decisions locally, eliminating delays from centralized systems."
+    },
+    {
+      icon: Shield,
+      title: "Enhanced Security",
+      description: "Keep sensitive manufacturing data local and reduce exposure to external threats."
+    },
+    {
+      icon: MapPin,
+      title: "Location Independence",
+      description: "Deploy manufacturing capabilities anywhere, regardless of connectivity to central systems."
+    },
+    {
+      icon: Cpu,
+      title: "Resource Efficiency",
+      description: "Optimize local resource usage and reduce waste through intelligent edge processing."
+    }
+  ];
+
   const developmentImages = [
     {
       url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
@@ -155,6 +222,12 @@ const DesignDevelopment = () => {
     // For now, just scroll to top or handle navigation as needed
     console.log(`Clicked on: ${link}`);
     // You can implement actual navigation or modal opening here
+  };
+
+  const handleExploreClick = (sectionTitle: string) => {
+    if (sectionTitle === "Edge Manufacturing") {
+      setIsEdgeManufacturingModalOpen(true);
+    }
   };
 
   return (
@@ -215,6 +288,7 @@ const DesignDevelopment = () => {
                 <p className="text-white/90 mb-6 leading-relaxed">{section.description}</p>
                 <Button 
                   className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-2 font-semibold rounded-lg"
+                  onClick={() => handleExploreClick(section.title)}
                 >
                   Explore {section.title} →
                 </Button>
@@ -526,6 +600,146 @@ const DesignDevelopment = () => {
           </div>
         </div>
       </section>
+
+      {/* Edge Manufacturing Modal */}
+      <Dialog open={isEdgeManufacturingModalOpen} onOpenChange={setIsEdgeManufacturingModalOpen}>
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-background">
+          <DialogHeader>
+            <DialogTitle className="text-3xl font-bold text-foreground mb-4 flex items-center">
+              <Factory className="w-8 h-8 mr-3 text-primary" />
+              Edge Manufacturing Solutions
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-8">
+            {/* Hero Section */}
+            <div className="text-center py-8 px-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Manufacturing at the
+                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Edge</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Enable distributed manufacturing capabilities that bring production closer to consumption points, 
+                reducing dependencies and enabling real-time responsiveness to local demands.
+              </p>
+            </div>
+
+            {/* Applications Section */}
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
+                Edge Manufacturing Applications
+              </h3>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                {edgeManufacturingApplications.map((app, index) => (
+                  <Card key={index} className="relative overflow-hidden border-0 shadow-lg">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${app.color} opacity-5`} />
+                    <CardHeader className="relative">
+                      <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${app.color} flex items-center justify-center mb-3`}>
+                        <app.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <CardTitle className="text-lg font-bold text-card-foreground">{app.title}</CardTitle>
+                      <CardDescription className="text-muted-foreground text-sm">
+                        {app.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="relative">
+                      <div className="space-y-2">
+                        {app.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center">
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                            <span className="text-xs text-card-foreground">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Benefits Section */}
+            <div className="bg-muted/30 rounded-lg p-6">
+              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
+                Why Choose Edge Manufacturing?
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {edgeManufacturingBenefits.map((benefit, index) => (
+                  <div key={index} className="text-center">
+                    <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
+                      <benefit.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h4 className="text-sm font-semibold text-foreground mb-2">{benefit.title}</h4>
+                    <p className="text-xs text-muted-foreground">{benefit.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Technical Specifications */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Core Capabilities</h3>
+                <div className="space-y-3">
+                  <div className="border-l-4 border-primary pl-3">
+                    <h4 className="font-semibold text-foreground text-sm">Distributed Computing</h4>
+                    <p className="text-muted-foreground text-xs">Process manufacturing data locally with edge computing nodes</p>
+                  </div>
+                  <div className="border-l-4 border-secondary pl-3">
+                    <h4 className="font-semibold text-foreground text-sm">Real-time Optimization</h4>
+                    <p className="text-muted-foreground text-xs">Continuously optimize production parameters based on local conditions</p>
+                  </div>
+                  <div className="border-l-4 border-accent pl-3">
+                    <h4 className="font-semibold text-foreground text-sm">Autonomous Operation</h4>
+                    <p className="text-muted-foreground text-xs">Operate independently even when disconnected from central systems</p>
+                  </div>
+                </div>
+              </div>
+
+              <Card className="p-6">
+                <CardHeader className="p-0 mb-4">
+                  <CardTitle className="text-lg font-bold text-card-foreground">Performance Metrics</CardTitle>
+                </CardHeader>
+                <CardContent className="p-0 space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground text-sm">Processing Latency</span>
+                    <Badge variant="secondary">&lt; 10ms</Badge>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground text-sm">Production Efficiency</span>
+                    <Badge variant="secondary">+35%</Badge>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground text-sm">Resource Utilization</span>
+                    <Badge variant="secondary">92%</Badge>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground text-sm">Uptime Guarantee</span>
+                    <Badge variant="secondary">99.9%</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Call to Action */}
+            <div className="bg-gradient-to-r from-primary to-secondary rounded-lg p-6 text-center">
+              <h3 className="text-xl font-bold text-white mb-3">
+                Ready to Transform Your Manufacturing?
+              </h3>
+              <p className="text-white/90 mb-4 text-sm">
+                Join the edge manufacturing revolution and bring production capabilities directly to your operations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button size="sm" variant="secondary">
+                  Request Demo
+                </Button>
+                <Button size="sm" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
+                  Contact Sales
+                </Button>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <Footer />
     </div>
