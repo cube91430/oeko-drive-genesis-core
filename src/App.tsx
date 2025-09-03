@@ -10,6 +10,7 @@ import DesignDevelopment from "./pages/DesignDevelopment";
 import Community from "./pages/Community";
 import OurWork from "./pages/OurWork";
 import Contact from "./pages/Contact";
+import EdgeManufacturing from "./pages/EdgeManufacturing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/community" element={<Community />} />
           <Route path="/our-work" element={<OurWork />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/edge-manufacturing" element={<EdgeManufacturing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
