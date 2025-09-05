@@ -14,6 +14,11 @@ import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, Fil
 
 const DesignDevelopment = () => {
   const [isEdgeManufacturingModalOpen, setIsEdgeManufacturingModalOpen] = useState(false);
+  const [isOekoFlyModalOpen, setIsOekoFlyModalOpen] = useState(false);
+  const [isOekoSystemModalOpen, setIsOekoSystemModalOpen] = useState(false);
+  const [isOekoToolsModalOpen, setIsOekoToolsModalOpen] = useState(false);
+  const [isDAMNNetworkModalOpen, setIsDAMNNetworkModalOpen] = useState(false);
+  const [isGPSDeniedModalOpen, setIsGPSDeniedModalOpen] = useState(false);
 
   const services = [
     {
@@ -225,8 +230,25 @@ const DesignDevelopment = () => {
   };
 
   const handleExploreClick = (sectionTitle: string) => {
-    if (sectionTitle === "Edge Manufacturing") {
-      setIsEdgeManufacturingModalOpen(true);
+    switch (sectionTitle) {
+      case "Edge Manufacturing":
+        setIsEdgeManufacturingModalOpen(true);
+        break;
+      case "OekoFly":
+        setIsOekoFlyModalOpen(true);
+        break;
+      case "OekoSystem":
+        setIsOekoSystemModalOpen(true);
+        break;
+      case "OekoTools":
+        setIsOekoToolsModalOpen(true);
+        break;
+      case "DAMN Network":
+        setIsDAMNNetworkModalOpen(true);
+        break;
+      case "GPS-Denied Architecture":
+        setIsGPSDeniedModalOpen(true);
+        break;
     }
   };
 
@@ -735,6 +757,371 @@ const DesignDevelopment = () => {
                 <Button size="sm" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
                   Contact Sales
                 </Button>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* OekoFly Modal */}
+      <Dialog open={isOekoFlyModalOpen} onOpenChange={setIsOekoFlyModalOpen}>
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-3xl font-bold text-card-foreground flex items-center gap-3">
+              <Plane className="w-8 h-8 text-blue-500" />
+              OekoFly - Advanced Flight Control Systems
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-8">
+            {/* Hero Section */}
+            <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg p-8 text-white">
+              <h2 className="text-2xl font-bold mb-4">Autonomous Drone Technology</h2>
+              <p className="text-blue-100 mb-6">
+                OekoFly provides advanced flight control systems and autonomous drone technology for aerial robotics applications. 
+                Features include intelligent navigation, obstacle avoidance, and real-time telemetry systems.
+              </p>
+            </div>
+
+            {/* Key Features */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <MapPin className="w-6 h-6 text-blue-500" />
+                  <h3 className="font-bold text-card-foreground">Intelligent Navigation</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Advanced GPS and sensor-based navigation with real-time path planning and waypoint management.</p>
+              </Card>
+              
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Shield className="w-6 h-6 text-blue-500" />
+                  <h3 className="font-bold text-card-foreground">Obstacle Avoidance</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">LiDAR and computer vision systems for real-time obstacle detection and collision avoidance.</p>
+              </Card>
+              
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Satellite className="w-6 h-6 text-blue-500" />
+                  <h3 className="font-bold text-card-foreground">Real-time Telemetry</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Comprehensive telemetry data transmission with encrypted communication protocols.</p>
+              </Card>
+            </div>
+
+            {/* Applications */}
+            <div>
+              <h3 className="text-xl font-bold text-card-foreground mb-4">Applications</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Search & Rescue</h4>
+                  <p className="text-muted-foreground text-sm">Autonomous search operations in challenging terrains with thermal imaging and GPS tracking.</p>
+                </div>
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Agricultural Monitoring</h4>
+                  <p className="text-muted-foreground text-sm">Precision agriculture with crop health monitoring and automated surveying capabilities.</p>
+                </div>
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Infrastructure Inspection</h4>
+                  <p className="text-muted-foreground text-sm">Automated inspection of bridges, power lines, and critical infrastructure components.</p>
+                </div>
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Environmental Monitoring</h4>
+                  <p className="text-muted-foreground text-sm">Air quality assessment and environmental data collection in remote locations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* OekoSystem Modal */}
+      <Dialog open={isOekoSystemModalOpen} onOpenChange={setIsOekoSystemModalOpen}>
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-3xl font-bold text-card-foreground flex items-center gap-3">
+              <Settings className="w-8 h-8 text-green-500" />
+              OekoSystem - Comprehensive Integration Platform
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-8">
+            {/* Hero Section */}
+            <div className="bg-gradient-to-r from-green-400 to-green-600 rounded-lg p-8 text-white">
+              <h2 className="text-2xl font-bold mb-4">Unified Robotics Ecosystem Management</h2>
+              <p className="text-green-100 mb-6">
+                OekoSystem provides comprehensive system integration platform for managing complex robotics ecosystems. 
+                Provides unified control, monitoring, and coordination across multiple robotic units and IoT devices.
+              </p>
+            </div>
+
+            {/* System Components */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Network className="w-6 h-6 text-green-500" />
+                  <h3 className="font-bold text-card-foreground">Unified Control</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Centralized command interface for managing multiple robotic systems simultaneously.</p>
+              </Card>
+              
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Cpu className="w-6 h-6 text-green-500" />
+                  <h3 className="font-bold text-card-foreground">Real-time Monitoring</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Comprehensive monitoring dashboard with performance metrics and system health indicators.</p>
+              </Card>
+              
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Globe className="w-6 h-6 text-green-500" />
+                  <h3 className="font-bold text-card-foreground">Multi-Device Coordination</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Seamless coordination between robots, sensors, and IoT devices in complex environments.</p>
+              </Card>
+            </div>
+
+            {/* Integration Capabilities */}
+            <div>
+              <h3 className="text-xl font-bold text-card-foreground mb-4">Integration Capabilities</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border-l-4 border-green-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Multi-Protocol Support</h4>
+                  <p className="text-muted-foreground text-sm">Compatible with CAN, Ethernet, Wi-Fi, and proprietary communication protocols.</p>
+                </div>
+                <div className="border-l-4 border-green-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Cloud Integration</h4>
+                  <p className="text-muted-foreground text-sm">Seamless cloud connectivity for remote monitoring and data analytics.</p>
+                </div>
+                <div className="border-l-4 border-green-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">AI-Powered Optimization</h4>
+                  <p className="text-muted-foreground text-sm">Machine learning algorithms for predictive maintenance and performance optimization.</p>
+                </div>
+                <div className="border-l-4 border-green-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Scalable Architecture</h4>
+                  <p className="text-muted-foreground text-sm">Modular design supporting systems from single robots to large-scale deployments.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* OekoTools Modal */}
+      <Dialog open={isOekoToolsModalOpen} onOpenChange={setIsOekoToolsModalOpen}>
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-3xl font-bold text-card-foreground flex items-center gap-3">
+              <Wrench className="w-8 h-8 text-orange-500" />
+              OekoTools - Professional Development Toolkit
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-8">
+            {/* Hero Section */}
+            <div className="bg-gradient-to-r from-orange-400 to-orange-600 rounded-lg p-8 text-white">
+              <h2 className="text-2xl font-bold mb-4">Complete Robotics Development Suite</h2>
+              <p className="text-orange-100 mb-6">
+                OekoTools features specialized hardware and software tools for robotics prototyping, testing, and deployment. 
+                Includes debugging interfaces and performance analysis utilities for comprehensive development workflow.
+              </p>
+            </div>
+
+            {/* Tool Categories */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Code className="w-6 h-6 text-orange-500" />
+                  <h3 className="font-bold text-card-foreground">Development IDE</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Integrated development environment with code completion, debugging, and simulation tools.</p>
+              </Card>
+              
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Cpu className="w-6 h-6 text-orange-500" />
+                  <h3 className="font-bold text-card-foreground">Hardware Debugger</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Real-time hardware debugging with JTAG support and signal analysis capabilities.</p>
+              </Card>
+              
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Zap className="w-6 h-6 text-orange-500" />
+                  <h3 className="font-bold text-card-foreground">Performance Analyzer</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Comprehensive performance monitoring and bottleneck analysis for optimization.</p>
+              </Card>
+            </div>
+
+            {/* Development Features */}
+            <div>
+              <h3 className="text-xl font-bold text-card-foreground mb-4">Development Features</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border-l-4 border-orange-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Rapid Prototyping</h4>
+                  <p className="text-muted-foreground text-sm">Quick iteration tools for hardware and software prototyping with modular components.</p>
+                </div>
+                <div className="border-l-4 border-orange-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Automated Testing</h4>
+                  <p className="text-muted-foreground text-sm">Comprehensive test automation framework for unit, integration, and system testing.</p>
+                </div>
+                <div className="border-l-4 border-orange-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Version Control Integration</h4>
+                  <p className="text-muted-foreground text-sm">Git integration for collaborative development with branching and merging support.</p>
+                </div>
+                <div className="border-l-4 border-orange-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Documentation Generation</h4>
+                  <p className="text-muted-foreground text-sm">Automatic documentation generation from code comments and annotations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* DAMN Network Modal */}
+      <Dialog open={isDAMNNetworkModalOpen} onOpenChange={setIsDAMNNetworkModalOpen}>
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-3xl font-bold text-card-foreground flex items-center gap-3">
+              <Network className="w-8 h-8 text-purple-500" />
+              DAMN Network - Decentralized Autonomous Mesh Network
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-8">
+            {/* Hero Section */}
+            <div className="bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg p-8 text-white">
+              <h2 className="text-2xl font-bold mb-4">Edge-to-Edge Wireless Mesh Networking</h2>
+              <p className="text-purple-100 mb-6">
+                DAMN Network provides autonomous edge-to-edge wireless mesh networking for connecting multiple nodes in data silos. 
+                Compatible with C2 (Command and Control) and JADC2 (Joint All-Domain Command and Control) systems.
+              </p>
+            </div>
+
+            {/* Network Features */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Globe className="w-6 h-6 text-purple-500" />
+                  <h3 className="font-bold text-card-foreground">Mesh Topology</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Self-organizing mesh network with automatic node discovery and routing optimization.</p>
+              </Card>
+              
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Shield className="w-6 h-6 text-purple-500" />
+                  <h3 className="font-bold text-card-foreground">Secure Communication</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">End-to-end encryption with military-grade security protocols and authentication.</p>
+              </Card>
+              
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Zap className="w-6 h-6 text-purple-500" />
+                  <h3 className="font-bold text-card-foreground">Low Latency</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Ultra-low latency communication optimized for real-time command and control operations.</p>
+              </Card>
+            </div>
+
+            {/* Military Applications */}
+            <div>
+              <h3 className="text-xl font-bold text-card-foreground mb-4">Military & Defense Applications</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border-l-4 border-purple-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">C2 Systems Integration</h4>
+                  <p className="text-muted-foreground text-sm">Full compatibility with Command and Control systems for tactical operations.</p>
+                </div>
+                <div className="border-l-4 border-purple-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">JADC2 Compliance</h4>
+                  <p className="text-muted-foreground text-sm">Joint All-Domain Command and Control integration for multi-domain operations.</p>
+                </div>
+                <div className="border-l-4 border-purple-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Battlefield Networks</h4>
+                  <p className="text-muted-foreground text-sm">Resilient communication networks for harsh military environments and contested areas.</p>
+                </div>
+                <div className="border-l-4 border-purple-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Data Silo Connectivity</h4>
+                  <p className="text-muted-foreground text-sm">Secure connection of isolated data systems while maintaining operational security.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* GPS-Denied Architecture Modal */}
+      <Dialog open={isGPSDeniedModalOpen} onOpenChange={setIsGPSDeniedModalOpen}>
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-3xl font-bold text-card-foreground flex items-center gap-3">
+              <Satellite className="w-8 h-8 text-red-500" />
+              GPS-Denied Architecture - Advanced Positioning System
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-8">
+            {/* Hero Section */}
+            <div className="bg-gradient-to-r from-red-400 to-red-600 rounded-lg p-8 text-white">
+              <h2 className="text-2xl font-bold mb-4">Navigation Without GPS Dependency</h2>
+              <p className="text-red-100 mb-6">
+                Oeko GPS-Denied Architecture, Node, and Module enable robots and sensors to locate and communicate without GPS sensors. 
+                Advanced positioning system for environments where GPS is unavailable or compromised.
+              </p>
+            </div>
+
+            {/* Positioning Technologies */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <MapPin className="w-6 h-6 text-red-500" />
+                  <h3 className="font-bold text-card-foreground">Inertial Navigation</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">High-precision IMU systems for dead reckoning and autonomous navigation.</p>
+              </Card>
+              
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Network className="w-6 h-6 text-red-500" />
+                  <h3 className="font-bold text-card-foreground">Mesh Positioning</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Collaborative positioning using mesh network triangulation and time-of-flight measurements.</p>
+              </Card>
+              
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Layers className="w-6 h-6 text-red-500" />
+                  <h3 className="font-bold text-card-foreground">SLAM Integration</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Simultaneous Localization and Mapping for real-time environment understanding.</p>
+              </Card>
+            </div>
+
+            {/* Operating Environments */}
+            <div>
+              <h3 className="text-xl font-bold text-card-foreground mb-4">Operating Environments</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Underground Operations</h4>
+                  <p className="text-muted-foreground text-sm">Navigation in tunnels, mines, and underground facilities where GPS signals are blocked.</p>
+                </div>
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Indoor Environments</h4>
+                  <p className="text-muted-foreground text-sm">Precise positioning in buildings, warehouses, and enclosed manufacturing facilities.</p>
+                </div>
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Contested Areas</h4>
+                  <p className="text-muted-foreground text-sm">Operation in environments with GPS jamming or signal interference.</p>
+                </div>
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="font-semibold text-card-foreground">Maritime Operations</h4>
+                  <p className="text-muted-foreground text-sm">Underwater and surface navigation where GPS signals are unavailable or unreliable.</p>
+                </div>
               </div>
             </div>
           </div>
