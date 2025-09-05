@@ -10,36 +10,31 @@ const SocialMediaLinks = () => {
       name: 'Discord',
       icon: '💬',
       url: '#',
-      description: 'Join our Discord server for real-time discussions',
-      members: '2.5K'
+      description: 'Join our Discord server for real-time discussions'
     },
     {
       name: 'Reddit',
       icon: '🤖',
       url: '#',
-      description: 'Share projects and get help from the community',
-      members: '1.8K'
+      description: 'Share projects and get help from the community'
     },
     {
       name: 'Instagram',
       icon: '📸',
       url: '#',
-      description: 'Follow our latest projects and behind-the-scenes',
-      members: '3.2K'
+      description: 'Follow our latest projects and behind-the-scenes'
     },
     {
       name: 'Hugging Face',
       icon: '🤗',
       url: '#',
-      description: 'Explore our AI models and datasets',
-      members: '890'
+      description: 'Explore our AI models and datasets'
     },
     {
       name: 'GitHub',
       icon: '⚡',
       url: '#',
-      description: 'Contribute to our open-source projects',
-      members: '1.5K'
+      description: 'Contribute to our open-source projects'
     }
   ];
 
@@ -54,7 +49,6 @@ const SocialMediaLinks = () => {
                 {social.icon}
               </div>
               <CardTitle className="text-lg text-moss-dark">{social.name}</CardTitle>
-              <CardDescription className="text-sm">{social.members} members</CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
               <p className="text-sm text-slate-600 mb-4 text-center">
