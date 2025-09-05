@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import AccountCreationForm from '@/components/community/AccountCreationForm';
 import SocialMediaLinks from '@/components/community/SocialMediaLinks';
 import ForumTopics from '@/components/community/ForumTopics';
+import OnlineCourses from '@/components/community/OnlineCourses';
 import CommunityStats from '@/components/community/CommunityStats';
 
 const Community = () => {
@@ -32,6 +33,9 @@ const Community = () => {
 
         {/* Community Forums */}
         <ForumTopics />
+
+        {/* Online Courses */}
+        <OnlineCourses />
 
         {/* Community Stats */}
         <CommunityStats />
