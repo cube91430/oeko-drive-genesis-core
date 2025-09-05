@@ -10,6 +10,7 @@ import Portfolio from '../components/Portfolio';
 import CallToAction from '../components/CallToAction';
 import Blog from '../components/Blog';
 import LocalBuildStats from '../components/LocalBuildStats';
+import KardusChallenge from '../components/KardusChallenge';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -60,6 +61,7 @@ const Index = () => {
       </section>
 
       <Features />
+      <KardusChallenge />
       <Services />
       <Portfolio />
       <LocalBuildStats />

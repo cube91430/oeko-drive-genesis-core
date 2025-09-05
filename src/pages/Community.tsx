@@ -7,6 +7,7 @@ import SocialMediaLinks from '@/components/community/SocialMediaLinks';
 import ForumTopics from '@/components/community/ForumTopics';
 import OnlineCourses from '@/components/community/OnlineCourses';
 import CommunityStats from '@/components/community/CommunityStats';
+import KardusChallenge from '@/components/KardusChallenge';
 
 const Community = () => {
   return (
@@ -27,6 +28,9 @@ const Community = () => {
 
         {/* Account Creation Section */}
         <AccountCreationForm />
+
+        {/* Kardus Challenge */}
+        <KardusChallenge />
 
         {/* Social Media Links */}
         <SocialMediaLinks />

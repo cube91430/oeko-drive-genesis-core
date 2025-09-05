@@ -11,6 +11,7 @@ import { Badge } from '@/components/ui/badge';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Code, Smartphone, Database, Cloud, Zap, Shield, Cpu, Globe, Layers, FileInput, Plane, Settings, Wrench, Network, Satellite, Factory, Wheat, Cog, MapPin, ArrowRight, CheckCircle, X } from 'lucide-react';
+import KardusChallenge from '../components/KardusChallenge';
 
 const DesignDevelopment = () => {
   const [isEdgeManufacturingModalOpen, setIsEdgeManufacturingModalOpen] = useState(false);
@@ -317,6 +318,13 @@ const DesignDevelopment = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Kardus Challenge */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <KardusChallenge />
         </div>
       </section>
 
