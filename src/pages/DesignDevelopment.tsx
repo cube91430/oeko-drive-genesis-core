@@ -408,20 +408,20 @@ const DesignDevelopment = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 mb-4">
               <span className="text-moss-medium">⚡</span>
-              <span className="text-gray-600">Contact Me</span>
+              <span className="text-card-foreground">Contact Me</span>
               <span className="text-moss-medium">⚡</span>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-2">
-              Let's Talk for <span className="text-moss-medium">Your</span>
-            </h2>
-            <h2 className="text-4xl font-bold text-gray-900 mb-12">
-              <span className="text-moss-medium">Next Projects</span>
+             <h2 className="text-4xl font-bold text-card-foreground mb-2">
+               Let's Talk for <span className="text-moss-medium">Your</span>
+             </h2>
+             <h2 className="text-4xl font-bold text-card-foreground mb-12">
+               <span className="text-moss-medium">Next Projects</span>
             </h2>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* General Contact Form */}
-            <div className="bg-white rounded-xl p-8 shadow-lg">
+             <div className="bg-muted rounded-xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">General Contact</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -463,7 +463,7 @@ const DesignDevelopment = () => {
             </div>
 
             {/* Hardware Development Form */}
-            <div className="bg-white rounded-xl p-8 shadow-lg">
+            <div className="bg-muted rounded-xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Hardware Development & Manufacturing</h3>
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
