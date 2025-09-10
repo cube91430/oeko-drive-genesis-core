@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   return (
     <header className="bg-card shadow-sm sticky top-0 z-50">
@@ -25,12 +27,19 @@ const Header = () => {
           
           <nav className="hidden md:block ml-auto">
             <div className="flex items-center space-x-8">
-              <a href="#features" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Features</a>
-              <a href="/products" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Products</a>
-              <a href="/design-development" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Design & Development</a>
-              <a href="/community" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Community</a>
-              <a href="/our-work" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Our Work</a>
-              <a href="/contact" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+              <a href="#features" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.features')}</a>
+              <a href="/products" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.products')}</a>
+              <a href="/design-development" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.designDev')}</a>
+              <a href="/community" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.community')}</a>
+              <a href="/our-work" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.ourWork')}</a>
+              <a href="/contact" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.contact')}</a>
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center space-x-1 text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors"
+              >
+                <Globe className="h-4 w-4" />
+                <span>{language === 'en' ? 'ID' : 'EN'}</span>
+              </button>
             </div>
           </nav>
 
@@ -47,12 +56,19 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card shadow-lg">
-              <a href="#features" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Features</a>
-              <a href="/products" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Products</a>
-              <a href="/design-development" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Design & Development</a>
-              <a href="/community" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Community</a>
-              <a href="/our-work" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Our Work</a>
-              <a href="/contact" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Contact</a>
+              <a href="#features" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.features')}</a>
+              <a href="/products" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.products')}</a>
+              <a href="/design-development" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.designDev')}</a>
+              <a href="/community" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.community')}</a>
+              <a href="/our-work" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.ourWork')}</a>
+              <a href="/contact" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.contact')}</a>
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center space-x-1 text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium w-full text-left"
+              >
+                <Globe className="h-4 w-4" />
+                <span>{language === 'en' ? 'Bahasa Indonesia' : 'English'}</span>
+              </button>
             </div>
           </div>
         )}
