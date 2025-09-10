@@ -422,10 +422,10 @@ const DesignDevelopment = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* General Contact Form */}
              <div className="bg-muted rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">General Contact</h3>
+              <h3 className="text-2xl font-bold text-card-foreground mb-6">General Contact</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <Label htmlFor="general-name" className="text-gray-700 font-medium mb-2">Your Name *</Label>
+                  <Label htmlFor="general-name" className="text-card-foreground font-medium mb-2">Your Name *</Label>
                   <Input 
                     id="general-name"
                     type="text" 
@@ -434,7 +434,7 @@ const DesignDevelopment = () => {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="general-email" className="text-gray-700 font-medium mb-2">Email *</Label>
+                  <Label htmlFor="general-email" className="text-card-foreground font-medium mb-2">Email *</Label>
                   <Input 
                     id="general-email"
                     type="email" 
@@ -445,7 +445,7 @@ const DesignDevelopment = () => {
               </div>
               
               <div className="mb-6">
-                <Label htmlFor="general-message" className="text-gray-700 font-medium mb-2">Message</Label>
+                <Label htmlFor="general-message" className="text-card-foreground font-medium mb-2">Message</Label>
                 <Textarea 
                   id="general-message"
                   rows={4}
@@ -464,11 +464,11 @@ const DesignDevelopment = () => {
 
             {/* Hardware Development Form */}
             <div className="bg-muted rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Hardware Development & Manufacturing</h3>
+              <h3 className="text-2xl font-bold text-card-foreground mb-6">Hardware Development & Manufacturing</h3>
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="hw-name" className="text-gray-700 font-medium mb-2">Name *</Label>
+                    <Label htmlFor="hw-name" className="text-card-foreground font-medium mb-2">Name *</Label>
                     <Input 
                       id="hw-name"
                       type="text" 
@@ -477,7 +477,7 @@ const DesignDevelopment = () => {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="hw-email" className="text-gray-700 font-medium mb-2">Email *</Label>
+                    <Label htmlFor="hw-email" className="text-card-foreground font-medium mb-2">Email *</Label>
                     <Input 
                       id="hw-email"
                       type="email" 
@@ -489,7 +489,7 @@ const DesignDevelopment = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="company-name" className="text-gray-700 font-medium mb-2">Company Name</Label>
+                    <Label htmlFor="company-name" className="text-card-foreground font-medium mb-2">Company Name</Label>
                     <Input 
                       id="company-name"
                       type="text" 
@@ -498,7 +498,7 @@ const DesignDevelopment = () => {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="nationality" className="text-gray-700 font-medium mb-2">Nationality</Label>
+                    <Label htmlFor="nationality" className="text-card-foreground font-medium mb-2">Nationality</Label>
                     <Input 
                       id="nationality"
                       type="text" 
@@ -509,7 +509,7 @@ const DesignDevelopment = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="company-address" className="text-gray-700 font-medium mb-2">Company Address</Label>
+                  <Label htmlFor="company-address" className="text-card-foreground font-medium mb-2">Company Address</Label>
                   <Textarea 
                     id="company-address"
                     rows={2}
@@ -520,7 +520,7 @@ const DesignDevelopment = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="service-type" className="text-gray-700 font-medium mb-2">Service Type *</Label>
+                    <Label htmlFor="service-type" className="text-card-foreground font-medium mb-2">Service Type *</Label>
                     <Select>
                       <SelectTrigger className="focus:ring-2 focus:ring-moss-medium focus:border-transparent">
                         <SelectValue placeholder="Select service type" />
@@ -533,7 +533,7 @@ const DesignDevelopment = () => {
                     </Select>
                   </div>
                   <div>
-                    <Label htmlFor="subject" className="text-gray-700 font-medium mb-2">Subject Line *</Label>
+                    <Label htmlFor="subject" className="text-card-foreground font-medium mb-2">Subject Line *</Label>
                     <Input 
                       id="subject"
                       type="text" 
@@ -544,7 +544,7 @@ const DesignDevelopment = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="project-description" className="text-gray-700 font-medium mb-2">Project Description *</Label>
+                  <Label htmlFor="project-description" className="text-card-foreground font-medium mb-2">Project Description *</Label>
                   <Textarea 
                     id="project-description"
                     rows={4}
@@ -554,7 +554,7 @@ const DesignDevelopment = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="project-files" className="text-gray-700 font-medium mb-2">Project Files</Label>
+                  <Label htmlFor="project-files" className="text-card-foreground font-medium mb-2">Project Files</Label>
                   <div className="mt-2 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-moss-medium transition-colors">
                     <div className="space-y-1 text-center">
                       <FileInput className="mx-auto h-12 w-12 text-gray-400" />
