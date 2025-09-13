@@ -986,6 +986,26 @@ const DesignDevelopment = () => {
                 </div>
               </div>
             </div>
+
+            {/* Tools */}
+            <div>
+              <h3 className="text-xl font-bold text-card-foreground mb-4">Available Tools</h3>
+              <div className="flex justify-center">
+                <button
+                  onClick={() => window.open('https://github.com/oekOpen/MicrOS---CLI', '_blank')}
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-2"
+                >
+                  <Code className="w-5 h-5" />
+                  MicrOS - CLI Operating System
+                </button>
+              </div>
+              <div className="mt-4 p-4 bg-muted rounded-lg">
+                <p className="text-muted-foreground text-sm text-center">
+                  MicrOS is a CLI command Operating System (OS) for supported boards. It easily visualizes microcontroller power and performance, 
+                  as well as pin state monitoring for comprehensive hardware debugging and analysis.
+                </p>
+              </div>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
