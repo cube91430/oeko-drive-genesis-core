@@ -913,6 +913,26 @@ const DesignDevelopment = () => {
                 </div>
               </div>
             </div>
+
+            {/* Tools */}
+            <div>
+              <h3 className="text-xl font-bold text-card-foreground mb-4">Available Tools</h3>
+              <div className="flex justify-center">
+                <button
+                  onClick={() => window.open('https://github.com/oekOpen/MPTransceiver', '_blank')}
+                  className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-2"
+                >
+                  <Network className="w-5 h-5" />
+                  MPTransceiver - Multi-Protocol Transceiver
+                </button>
+              </div>
+              <div className="mt-4 p-4 bg-muted rounded-lg">
+                <p className="text-muted-foreground text-sm text-center">
+                  MPTransceiver is a Multi-Protocol Transceiver that supports Dynamic Multi Protocol Communication. MPT Transceiver can analyze, decode, 
+                  bridge, and translate multiple communication networks. Perfect for multi-communication node, robotics, and remote control projects.
+                </p>
+              </div>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
@@ -990,7 +1010,7 @@ const DesignDevelopment = () => {
             {/* Tools */}
             <div>
               <h3 className="text-xl font-bold text-card-foreground mb-4">Available Tools</h3>
-              <div className="flex justify-center">
+              <div className="flex flex-col gap-4 items-center">
                 <button
                   onClick={() => window.open('https://github.com/oekOpen/MicrOS---CLI', '_blank')}
                   className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-2"
@@ -998,12 +1018,27 @@ const DesignDevelopment = () => {
                   <Code className="w-5 h-5" />
                   MicrOS - CLI Operating System
                 </button>
+                <button
+                  onClick={() => window.open('https://github.com/oekOpen/MPTransceiver', '_blank')}
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-2"
+                >
+                  <Network className="w-5 h-5" />
+                  MPTransceiver - Multi-Protocol Transceiver
+                </button>
               </div>
-              <div className="mt-4 p-4 bg-muted rounded-lg">
-                <p className="text-muted-foreground text-sm text-center">
-                  MicrOS is a CLI command Operating System (OS) for supported boards. It easily visualizes microcontroller power and performance, 
-                  as well as pin state monitoring for comprehensive hardware debugging and analysis.
-                </p>
+              <div className="mt-4 space-y-4">
+                <div className="p-4 bg-muted rounded-lg">
+                  <p className="text-muted-foreground text-sm text-center">
+                    MicrOS is a CLI command Operating System (OS) for supported boards. It easily visualizes microcontroller power and performance, 
+                    as well as pin state monitoring for comprehensive hardware debugging and analysis.
+                  </p>
+                </div>
+                <div className="p-4 bg-muted rounded-lg">
+                  <p className="text-muted-foreground text-sm text-center">
+                    MPTransceiver is a Multi-Protocol Transceiver that supports Dynamic Multi Protocol Communication. MPT Transceiver can analyze, decode, 
+                    bridge, and translate multiple communication networks. Perfect for multi-communication node, robotics, and remote control projects.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
