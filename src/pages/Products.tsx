@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Monitor, Smartphone, Layout, Layers, Lightbulb, Globe, User, Image, Palette, Car, Sprout } from 'lucide-react';
+import { Monitor, Smartphone, Layout, Layers, Lightbulb, Globe, User, Image, Palette, Car, Sprout, Plane, Database } from 'lucide-react';
 
 const Products = () => {
   const services = [
@@ -248,6 +248,160 @@ const Products = () => {
                   >
                     Explore GRUT Solutions →
                   </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Agricultural Products Detailed Section */}
+          <div className="mb-16 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-950 dark:to-emerald-950 rounded-xl p-8 border-l-4 border-l-green-600">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-green-800 dark:text-green-200 mb-4">Agricultural Solutions for Smart & Precision Farming</h2>
+              <p className="text-green-700 dark:text-green-300 max-w-3xl mx-auto">
+                Complete autonomous systems for distributed smart farming and precision agriculture, providing real-time 3D monitoring with command and control capabilities accessible anywhere, anytime.
+              </p>
+            </div>
+
+            {/* Drones Section */}
+            <div className="mb-10">
+              <div className="flex items-center mb-6">
+                <Plane className="w-8 h-8 text-green-700 dark:text-green-300 mr-3" />
+                <h3 className="text-2xl font-bold text-green-800 dark:text-green-200">Autonomous Multi-Purpose Drones</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* AG01 */}
+                <div className="bg-white/80 dark:bg-black/40 rounded-lg p-6 shadow-md">
+                  <h4 className="text-xl font-bold text-green-800 dark:text-green-200 mb-3">AG01 - Heavy Payload Drone</h4>
+                  <ul className="space-y-2 text-green-700 dark:text-green-300 mb-4">
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span><strong>Payload:</strong> 10kg capacity (8kg - 12kg range)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span><strong>Flight Time:</strong> 30 minutes to 1 hour</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span><strong>Battery:</strong> 6S 16000mAh</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span><strong>Applications:</strong> Crop spraying, harvest carrying, large field monitoring</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* AG02 */}
+                <div className="bg-white/80 dark:bg-black/40 rounded-lg p-6 shadow-md">
+                  <h4 className="text-xl font-bold text-green-800 dark:text-green-200 mb-3">AG02 - Compact Monitoring Drone</h4>
+                  <ul className="space-y-2 text-green-700 dark:text-green-300 mb-4">
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span><strong>Payload:</strong> 3kg - Portable and lightweight</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span><strong>Features:</strong> Remote monitoring with sampling capability</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span><strong>Phenotyping:</strong> Analyzes air, water, and soil composition accurately</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span><strong>Connectivity:</strong> Open and isolated network relay capability</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Conversion Kit Section */}
+            <div className="mb-10">
+              <div className="flex items-center mb-6">
+                <Car className="w-8 h-8 text-green-700 dark:text-green-300 mr-3" />
+                <h3 className="text-2xl font-bold text-green-800 dark:text-green-200">Autonomous Conversion Kit</h3>
+              </div>
+              <div className="bg-white/80 dark:bg-black/40 rounded-lg p-6 shadow-md">
+                <p className="text-green-700 dark:text-green-300 mb-4">
+                  Transform your farming equipment into a fully autonomous integrated system. Our conversion kits support AGVs, Drones, and Ground Sensors to create a complete ecosystem for monitoring, protecting, and controlling crops autonomously.
+                </p>
+                <ul className="space-y-2 text-green-700 dark:text-green-300">
+                  <li className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span>Complete 3D real-time monitoring and visualization</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span>Command and control from anywhere, anytime</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span>Seamless integration with existing farming equipment</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span>Autonomous operation for maximum efficiency</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Data Logger Section */}
+            <div>
+              <div className="flex items-center mb-6">
+                <Database className="w-8 h-8 text-green-700 dark:text-green-300 mr-3" />
+                <h3 className="text-2xl font-bold text-green-800 dark:text-green-200">Data Loggers & Debuggers</h3>
+              </div>
+              <p className="text-green-700 dark:text-green-300 mb-6">
+                Professional-grade data logging and debugging tools designed for researchers and developers. Multi-communication and multi-protocol support for comprehensive data analysis.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Manta01 */}
+                <div className="bg-white/80 dark:bg-black/40 rounded-lg p-6 shadow-md">
+                  <h4 className="text-xl font-bold text-green-800 dark:text-green-200 mb-3">Manta01 - Physical Connection Logger</h4>
+                  <ul className="space-y-2 text-green-700 dark:text-green-300">
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>Multi-communication and multi-protocol logging</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>Supports RS485, RS232, CAN protocols</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>Bridge data from different protocols</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>Direct physical connection for reliable data capture</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* MantaNet */}
+                <div className="bg-white/80 dark:bg-black/40 rounded-lg p-6 shadow-md">
+                  <h4 className="text-xl font-bold text-green-800 dark:text-green-200 mb-3">MantaNet - Wireless Logger System</h4>
+                  <ul className="space-y-2 text-green-700 dark:text-green-300">
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>Wireless viewing and programming capability</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span>Includes Transceiver and Receiver modules</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span><strong>Range:</strong> Up to 10km at 2.4GHz</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2">•</span>
+                      <span><strong>Latency:</strong> Ultra-low 2ms response time</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
