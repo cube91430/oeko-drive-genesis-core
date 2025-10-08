@@ -27,11 +27,11 @@ const Header = () => {
           
           <nav className="hidden md:block ml-auto">
             <div className="flex items-center space-x-8">
-              <a href="#features" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.features')}</a>
-              <a href="/products" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.products')}</a>
-              <a href="/design-development" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.designDev')}</a>
-              <a href="/community" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.community')}</a>
+              <a href="/grut" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">GRUT</a>
+              <a href="/manta" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Manta</a>
+              <a href="/research" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Research</a>
               <a href="/our-work" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.ourWork')}</a>
+              <a href="/products" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.products')}</a>
               <a href="/contact" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.contact')}</a>
               <button
                 onClick={toggleLanguage}
@@ -56,11 +56,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card shadow-lg">
-              <a href="#features" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.features')}</a>
-              <a href="/products" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.products')}</a>
-              <a href="/design-development" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.designDev')}</a>
-              <a href="/community" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.community')}</a>
+              <a href="/grut" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">GRUT</a>
+              <a href="/manta" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Manta</a>
+              <a href="/research" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Research</a>
               <a href="/our-work" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.ourWork')}</a>
+              <a href="/products" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.products')}</a>
               <a href="/contact" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.contact')}</a>
               <button
                 onClick={toggleLanguage}
