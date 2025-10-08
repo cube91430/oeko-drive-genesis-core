@@ -69,7 +69,23 @@ export default {
 					light: 'hsl(var(--brand-light))',
 					dark: 'hsl(var(--brand-dark))',
 					accent: 'hsl(var(--brand-accent))'
+				},
+				tech: {
+					cyan: 'hsl(var(--tech-cyan))',
+					green: 'hsl(var(--tech-green))',
+					yellow: 'hsl(var(--tech-yellow))',
+					orange: 'hsl(var(--tech-orange))',
+					red: 'hsl(var(--tech-red))'
+				},
+				moss: {
+					dark: 'hsl(var(--brand-dark))',
+					medium: 'hsl(var(--brand-primary))',
+					light: 'hsl(var(--brand-light))'
 				}
+			},
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				mono: ['Courier New', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
