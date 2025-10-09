@@ -21,7 +21,7 @@ const Header = () => {
                   className="w-8 h-8 object-contain"
                 />
               </div>
-              <h1 className="text-2xl font-bold text-brand-primary">OekoDrive</h1>
+              <h1 className="text-2xl font-bold text-tech-green">OekoDrive</h1>
             </Link>
           </div>
           
