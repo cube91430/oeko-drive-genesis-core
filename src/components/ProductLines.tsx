@@ -5,15 +5,8 @@ import { Sprout, Database } from 'lucide-react';
 
 const ProductLines = () => {
   return (
-    <section id="product-lines" className="py-24 bg-gradient-to-b from-background to-muted">
+    <section id="product-lines" className="py-16 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Our Product Lines</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Innovative solutions for autonomous agriculture and industrial data systems
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* GRUT - Autonomous Agriculture */}
           <div className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300">

@@ -17,6 +17,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
+      <ProductLines />
       
       {/* Agricultural Products Section - Moved to Top */}
       <section className="py-20 bg-card">
@@ -58,7 +59,6 @@ const Index = () => {
 
       <Features />
       <Services />
-      <ProductLines />
       <LocalBuildStats />
       <CallToAction />
       <Blog />

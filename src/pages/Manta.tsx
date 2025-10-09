@@ -121,6 +121,28 @@ const Manta = () => {
         </div>
       </section>
 
+      {/* Introduction Section */}
+      <section className="py-16 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4">
+            <div className="inline-block mb-4">
+              <span className="text-sm font-mono text-tech-cyan tracking-wider uppercase border border-tech-cyan/30 px-3 py-1 rounded-sm">
+                About MANTA
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              AI-Integrated Industrial Platform
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              MANTA is the AI-Integrated target, data visualization, identification, and Mesh Network 
+              developed by OekoDrive to drive the OekoDrive line products and integrate all of them 
+              into a single isolated mesh network. This comprehensive platform enables seamless 
+              communication and coordination across all industrial and agricultural automation systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Specialized Sections */}
       <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
