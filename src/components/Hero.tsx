@@ -1,11 +1,22 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import heroBackground from '@/assets/hero-background.jpg';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative bg-gradient-to-br from-brand-dark via-brand-primary to-slate-800 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+    <section id="home" className="relative bg-gradient-to-br from-brand-dark via-brand-primary to-slate-800 text-white overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroBackground} 
+          alt="Industrial manufacturing facility"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/90 via-brand-primary/80 to-slate-800/90"></div>
+      </div>
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">

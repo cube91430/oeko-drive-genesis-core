@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Services from '../components/Services';
-import Portfolio from '../components/Portfolio';
+import ProductLines from '../components/ProductLines';
 import CallToAction from '../components/CallToAction';
 import Blog from '../components/Blog';
 import LocalBuildStats from '../components/LocalBuildStats';
@@ -58,7 +58,7 @@ const Index = () => {
 
       <Features />
       <Services />
-      <Portfolio />
+      <ProductLines />
       <LocalBuildStats />
       <CallToAction />
       <Blog />
