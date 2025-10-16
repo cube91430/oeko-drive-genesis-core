@@ -30,7 +30,7 @@ const Header = () => {
               <a href="/grut" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">GRUT</a>
               <a href="/manta" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Manta</a>
               <a href="/research" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Research</a>
-              <a href="/our-work" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.ourWork')}</a>
+              <a href="/konve" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Konve</a>
               <a href="/products" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.products')}</a>
               <a href="/contact" className="text-slate-600 hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">{t('header.contact')}</a>
               <button
@@ -59,7 +59,7 @@ const Header = () => {
               <a href="/grut" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">GRUT</a>
               <a href="/manta" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Manta</a>
               <a href="/research" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Research</a>
-              <a href="/our-work" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.ourWork')}</a>
+              <a href="/konve" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">Konve</a>
               <a href="/products" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.products')}</a>
               <a href="/contact" className="text-slate-600 hover:text-brand-primary block px-3 py-2 text-base font-medium">{t('header.contact')}</a>
               <button

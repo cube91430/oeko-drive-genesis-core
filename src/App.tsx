@@ -9,7 +9,7 @@ import Products from "./pages/Products";
 import Research from "./pages/Research";
 import GRUT from "./pages/GRUT";
 import Manta from "./pages/Manta";
-import OurWork from "./pages/OurWork";
+import Konve from "./pages/Konve";
 import Contact from "./pages/Contact";
 import EdgeManufacturing from "./pages/EdgeManufacturing";
 import NotFound from "./pages/NotFound";
@@ -27,7 +27,7 @@ const App = () => (
           <Route path="/grut" element={<GRUT />} />
           <Route path="/manta" element={<Manta />} />
           <Route path="/research" element={<Research />} />
-          <Route path="/our-work" element={<OurWork />} />
+          <Route path="/konve" element={<Konve />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/edge-manufacturing" element={<EdgeManufacturing />} />
